@@ -5,5 +5,5 @@ white: "#fcfcfc"
 black: "#262636"
 
 #Image Customization
-header-image: "../img/header-bg.png"
-contact-image: "../img/map-image.png"
+header-image: "../img/header-bg.webp"
+contact-image: "../img/map-image.webp"

@@ -2,7 +2,7 @@
 <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
 <loc>https://evemed.pl/</loc>
-<lastmod>2025-11-25T19:19:35+00:00</lastmod>
+<lastmod>2025-12-12T18:30:00+00:00</lastmod>
 <priority>1.00</priority>
 </url>
 <url>
@@ -53,6 +53,11 @@
 <url>
 <loc>https://evemed.pl/assets/docs/Regulamin_25_11_2025.pdf</loc>
 <lastmod>2025-11-25T19:19:35+00:00</lastmod>
+<priority>0.10</priority>
+</url>
+<url>
+<loc>https://evemed.pl/assets/docs/Statut_12_12_2025.pdf</loc>
+<lastmod>2025-12-12T117:155:00+00:00</lastmod>
 <priority>0.10</priority>
 </url>
 </urlset>
