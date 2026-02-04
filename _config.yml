@@ -26,7 +26,8 @@ author     : Evemed
 locale: "pl-PL" # See available languages in _data/sitetext.yml
 
 analytics:
-  google: G-7RJZQ26SGD
+  # google: G-7RJZQ26SGD
+  google: AW-17910255653
 
 contact:
   address1: ul. Inowrocławska 56 
