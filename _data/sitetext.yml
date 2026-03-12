@@ -42,7 +42,7 @@ pl: &DEFAULT_PL
         icon: fas fa-brain
         url: uslugi/biofeedback
       - title: "Psychotraumatolog"
-        desc: "Trening wspomaga rozwój poznawczy, poprawia uwagę i zdolność do radzenia sobie ze stresem"
+        desc: "Specjalistyczne wsparcie w odzyskiwaniu równowagi po trudnych doświadczeniach. Pomaga zintegrować przeszłość, dając oparcie w budowaniu stabilnej codzienności"
         icon: far fa-comments
         url: uslugi/psychotraumatolog
 
