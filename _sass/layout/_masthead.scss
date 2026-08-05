@@ -38,13 +38,18 @@ header.masthead {
       margin-bottom: 25px;
       @include heading-font;
     }
+    img {
+      width: 170px;
+      display: block;
+      margin: 35px auto 0 auto;
+    }
   }
 }
 @media (min-width: 768px) {
   header.masthead {
     .intro-text {
-      padding-top: 300px;
-      padding-bottom: 200px;
+      padding-top: 215px;
+      padding-bottom: 150px;
       .intro-lead-in {
         font-size: 40px;
         font-style: italic;
@@ -58,6 +63,9 @@ header.masthead {
         line-height: 75px;
         margin-bottom: 50px;
         @include heading-font;
+      }
+      img {
+        width: 420px;
       }
     }
   }

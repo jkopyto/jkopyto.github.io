@@ -21,6 +21,10 @@ layout: page
 
 Jeśli skutki tych zdarzeń – takie jak natrętne wspomnienia (flashbacki), koszmary, lęk, unikanie miejsc lub ludzi, poczucie odizolowania – utrudniają Ci codzienne funkcjonowanie, wsparcie psychotraumatologa może być kluczowe na drodze do zdrowienia. Celem terapii jest zintegrowanie traumatycznego doświadczenia, zredukowanie jego objawów i odbudowanie poczucia bezpieczeństwa w świecie.
 
+---
+
+Celem umówienia wizyty u psychotraumatolog **mgr Magdaleny Jaworskiej** prosimy o kontakt mailowy na adres: <a href="mailto:m.jaworska@evemed.pl">m.jaworska@evemed.pl</a>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
