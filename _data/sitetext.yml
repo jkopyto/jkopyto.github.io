@@ -157,9 +157,13 @@ pl: &DEFAULT_PL
     legal: "Polityka prywatności"
     rulebook: "Regulamin"
     statutes: "Statut"
+    som: "Standardy ochrony małoletnich"
+    somShort: "Standardy ochrony małoletnich (skrócone)"
     social:
       - url: https://www.facebook.com/PoradniaEvemedWroclaw
         icon: "fab fa-facebook-f"
+      - url: https://www.instagram.com/evemed.poradnia/
+        icon: "fab fa-instagram"
 pl-PL:
   <<: *DEFAULT_PL
 

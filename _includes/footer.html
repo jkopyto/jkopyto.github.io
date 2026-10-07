@@ -2,40 +2,54 @@
 <footer class="footer" id="footer" style="background-color: white">
   <div class="container">
     {% if site.locale and site.locale != "" and site.locale != nil %}
-    <div class="row align-items-center">
-      <!-- Legal -->
-      <div class="col-md-5">
-        <ul class="list-inline quicklinks">
-          <li class="list-inline-item">
-            <a href="/assets/docs/Polityka_prywatnosci_cookies_25_11_2025.pdf"
-              target="_blank"
-              >{{ site.data.sitetext[site.locale].footer.legal | default:
-              "Privacy Policy" }}</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/assets/docs/Regulamin_25_11_2025.pdf"
-              target="_blank"
-              >{{ site.data.sitetext[site.locale].footer.rulebook | default:
-              "Rulebook" }}</a
-            >
-          </li>
-          <li class="list-inline-item">
-            <a href="/assets/docs/Statut_12_12_2025.pdf"
-              target="_blank"
-              >{{ site.data.sitetext[site.locale].footer.statutes | default:
-              "Statutes" }}</a
-            >
-          </li>
-          <li id="cookie-settings-footer" class="list-inline-item" style="color: {{ site.data.style.primary }}; cursor: pointer;">
-            <p>
-              Ustawienia cookies
-            </p>
-          </li>
-        </ul>
+    <!-- Legal -->
+    <ul class="list-inline quicklinks">
+      <li class="list-inline-item">
+        <a
+          href="/assets/docs/Polityka_prywatnosci_cookies_25_11_2025.pdf"
+          target="_blank"
+          >{{ site.data.sitetext[site.locale].footer.legal | default:
+          "Privacy Policy" }}</a
+        >
+      </li>
+      <li class="list-inline-item">
+        <a href="/assets/docs/Regulamin_25_11_2025.pdf" target="_blank"
+          >{{ site.data.sitetext[site.locale].footer.rulebook | default:
+          "Rulebook" }}</a
+        >
+      </li>
+      <li class="list-inline-item">
+        <a href="/assets/docs/Statut_12_12_2025.pdf" target="_blank"
+          >{{ site.data.sitetext[site.locale].footer.statutes | default:
+          "Statutes" }}</a
+        >
+      </li>
+      <li class="list-inline-item">
+        <a href="/assets/docs/som_07-10-2026.pdf" target="_blank"
+          >{{ site.data.sitetext[site.locale].footer.som | default:
+          "Standardy ochrony małoletnich" }}</a
+        >
+      </li>
+      <li class="list-inline-item">
+        <a href="/assets/docs/som_skrocone_07-10-2026.pdf" target="_blank"
+          >{{ site.data.sitetext[site.locale].footer.somShort | default:
+          "Standardy ochrony małoletnich (skrócone)" }}</a
+        >
+      </li>
+      <li class="list-inline-item">
+        <button type="button" id="cookie-settings-footer">
+          Ustawienia cookies
+        </button>
+      </li>
+    </ul>
+    <div class="row align-items-center footer-bottom">
+      <div class="col-md-6 text-md-left">
+        <span class="copyright"
+          >Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span
+        >
       </div>
       <!-- Social Media -->
-      <div class="col-md-3">
+      <div class="col-md-6 text-md-right">
         <ul class="list-inline social-buttons">
           {% for link in site.data.sitetext[site.locale].footer.social %}
           <li class="list-inline-item">
@@ -47,11 +61,6 @@
           </li>
           {% endfor %}
         </ul>
-      </div>
-      <div class="col-md-4">
-        <span class="copyright"
-          >Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span
-        >
       </div>
     </div>
     {% else %}
@@ -80,14 +89,12 @@
         <ul class="list-inline quicklinks">
           <li class="list-inline-item">
             <a href="/polityka-prywatnosci"
-              >{{ site.data.sitetext.footer.legal | default:
-              "Privacy Policy" }}</a
+              >{{ site.data.sitetext.footer.legal | default: "Privacy Policy"
+              }}</a
             >
           </li>
           <li class="list-inline-item">
-            <p>
-              Ustawienia cookies
-            </p>
+            <p>Ustawienia cookies</p>
           </li>
         </ul>
       </div>
@@ -96,44 +103,44 @@
   </div>
 </footer>
 <script>
-(function() {
-  'use strict';
-  const modal = document.getElementById('cookie-settings-modal');
-  const settingsBtn = document.getElementById('cookie-settings-footer');
-  const analyticsToggle = document.getElementById('cookie-analytics');
-  
-  settingsBtn.addEventListener('click', function() {
-    modal.style.display = 'flex';
-    setTimeout(() => {
-      modal.classList.add('cookie-modal-show');
-    }, 10);
-    
-    const currentConsent = getConsent();
-    if (currentConsent) {
-      analyticsToggle.checked = currentConsent.analytics;
-    }
-  });
+  ;(function () {
+    "use strict"
+    const modal = document.getElementById("cookie-settings-modal")
+    const settingsBtn = document.getElementById("cookie-settings-footer")
+    const analyticsToggle = document.getElementById("cookie-analytics")
 
-  function getConsent() {
-    try {
-      const stored = localStorage.getItem('evemed_cookie_consent');
-      return stored ? JSON.parse(stored) : null;
-    } catch (e) {
-      return null;
+    settingsBtn.addEventListener("click", function () {
+      modal.style.display = "flex"
+      setTimeout(() => {
+        modal.classList.add("cookie-modal-show")
+      }, 10)
+
+      const currentConsent = getConsent()
+      if (currentConsent) {
+        analyticsToggle.checked = currentConsent.analytics
+      }
+    })
+
+    function getConsent() {
+      try {
+        const stored = localStorage.getItem("evemed_cookie_consent")
+        return stored ? JSON.parse(stored) : null
+      } catch (e) {
+        return null
+      }
     }
-  }
-})();
+  })()
 </script>
 {% if page.layout == "page" %}
 <script>
-  fixPageShort();
+  fixPageShort()
   function fixPageShort() {
     if (window.innerHeight > document.body.offsetHeight) {
-      document.getElementById("footer").style.position = "fixed";
-      document.getElementById("footer").style.bottom = 0;
-      document.getElementById("footer").style.right = 0;
-      document.getElementById("footer").style.left = 0;
-      document.getElementById("footer").style.width = "100%";
+      document.getElementById("footer").style.position = "fixed"
+      document.getElementById("footer").style.bottom = 0
+      document.getElementById("footer").style.right = 0
+      document.getElementById("footer").style.left = 0
+      document.getElementById("footer").style.width = "100%"
     }
   }
 </script>

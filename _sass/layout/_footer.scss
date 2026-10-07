@@ -1,0 +1,72 @@
+// Styling for the footer (overrides theme's layout/_footer.scss)
+.footer {
+  padding: 40px 0 20px;
+  text-align: center;
+  border-top: 1px solid $gray-200;
+  span.copyright {
+    font-size: 90%;
+    line-height: 50px;
+    text-transform: none;
+    @include heading-font;
+  }
+  ul.quicklinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 32px;
+    margin-bottom: 0;
+    font-size: 90%;
+    line-height: 1.5;
+    text-transform: none;
+    @include heading-font;
+    .list-inline-item {
+      margin-right: 0;
+    }
+    a,
+    button {
+      color: $primary;
+    }
+    button {
+      padding: 0;
+      border: 0;
+      background: none;
+      font: inherit;
+      cursor: pointer;
+    }
+    a:hover,
+    button:hover {
+      text-decoration: underline;
+    }
+  }
+  .footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid $gray-200;
+  }
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+  li {
+    a {
+      font-size: 20px;
+      line-height: 50px;
+      text-align: center;
+      display: block;
+      width: 50px;
+      height: 50px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      color: white;
+      border-radius: 100%;
+      outline: none;
+      background-color: $gray-900;
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}
