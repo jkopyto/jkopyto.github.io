@@ -28,6 +28,7 @@ locale: "pl-PL" # See available languages in _data/sitetext.yml
 analytics:
   # google: G-7RJZQ26SGD
   google: AW-17910255653
+  gtm: GTM-T5977GFG
 
 contact:
   address1: ul. Inowrocławska 56 

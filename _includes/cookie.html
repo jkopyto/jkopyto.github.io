@@ -182,34 +182,45 @@
   }
   
   function applyConsent(consent) {
+    // gtag() and the 'denied' defaults are defined in head.html
+    const state = consent.analytics ? 'granted' : 'denied';
+    gtag('consent', 'update', {
+      analytics_storage: state,
+      ad_storage: state,
+      ad_user_data: state,
+      ad_personalization: state
+    });
     if (consent.analytics) {
+      loadGTM();
       enableGoogleAnalytics();
-    } else {
-      window.dataLayer = []
-      window.gtag = null
-      const script = document.getElementById("gtag-evemed")
-      if(script) {
-        script.remove()
-      }
     }
   }
-  
+
   function enableGoogleAnalytics() {
-    if (window.gtag) return;
-    
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag = gtag;
+    if (document.getElementById('gtag-evemed')) return;
+
     gtag('js', new Date());
     gtag('config', "{{ site.analytics.google }}", {
       'cookie_flags': 'SameSite=None;Secure'
     });
-    
+
     const script = document.createElement('script');
-    script.id="gtag-evemed"
+    script.id = 'gtag-evemed';
     script.src = "https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google }}";
     script.async = true;
-    document.head.appendChild(script);    
+    document.head.appendChild(script);
+  }
+
+  // GTM and the AW tag load only after consent, so nothing fires before it
+  function loadGTM() {
+    if (document.getElementById('gtm-evemed')) return;
+
+    dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+    const script = document.createElement('script');
+    script.id = 'gtm-evemed';
+    script.src = 'https://www.googletagmanager.com/gtm.js?id={{ site.analytics.gtm }}';
+    script.async = true;
+    document.head.appendChild(script);
   }
 })();
 </script>
