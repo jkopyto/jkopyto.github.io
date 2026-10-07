@@ -34,7 +34,7 @@ contact:
   address2: 53-648 Wrocław
   address3: Wrocław
   phone:
-    val: +48724314798
+    val: "+48724314798"
     formatted: (+48) 724 314 798
   email: poradnia@evemed.pl
 

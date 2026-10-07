@@ -161,7 +161,7 @@ permalink: /umow-sie
           <a href="/kontakt" class="btn btn-primary btn-lg mr-3 mb-3">
             <i class="fas fa-envelope mr-2"></i>Formularz kontaktowy
           </a>
-          <a href="tel: {{ site.contact.phone.val }}" class="btn btn-outline-primary btn-lg mb-3">
+          <a href="tel:{{ site.contact.phone.val }}" class="btn btn-outline-primary btn-lg mb-3">
             <i class="fas fa-phone mr-2"></i>Zadzwoń: {{ site.contact.phone.formatted }}
           </a>
         </div>
