@@ -23,7 +23,7 @@ To regularne spotkania, których celem jest **głębsza i trwała zmiana**. Jeś
 ---
 
 ### Terapia traumy
-Patrz > psychotraumatolog
+Terapia skierowana do osób, które doświadczyły wypadku, przemocy, nagłej straty czy innych zdarzeń traumatycznych i zmagają się z ich skutkami, takimi jak natrętne wspomnienia, koszmary czy lęk. Prowadzi ją psychotraumatolog, a jej celem jest **przepracowanie trudnych doświadczeń i odbudowanie poczucia bezpieczeństwa**. [Dowiedz się więcej o terapii z psychotraumatologiem](/uslugi/psychotraumatolog).
 
 ---
 

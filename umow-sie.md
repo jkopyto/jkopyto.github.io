@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Umów się
-description: Umów wizytę u psychologa, psychiatry, pedagoga, psychotraumatologa we Wrocławiu lub online. Pierwszy krok to zaledwie kilka kliknięć - wybierz termin i specjalistę już teraz!
+description: Umów wizytę u psychologa, pedagoga, psychotraumatologa we Wrocławiu lub online. Pierwszy krok to zaledwie kilka kliknięć - wybierz termin i specjalistę już teraz!
 subtitle: Umów się na wizytę lub skontaktuj się z nami
 permalink: /umow-sie
 ---

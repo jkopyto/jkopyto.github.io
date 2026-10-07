@@ -22,7 +22,7 @@ Masz wrażenie, że proces nauki mógłby być bardziej efektywny – u Ciebie l
 ---
 
 ### Diagnoza psychologiczno-pedagogiczna (dla potrzeb szkolnych)
-OPINIA
+Łączy badanie psychologiczne i pedagogiczne, by wyjaśnić źródło trudności szkolnych dziecka, np. **dysleksji, dysgrafii czy problemów z koncentracją**. Kończy się **pisemną opinią z zaleceniami, honorowaną przez szkoły**, która może stanowić podstawę do dostosowania wymagań edukacyjnych do potrzeb ucznia. [Dowiedz się więcej o opinii psychologiczno-pedagogicznej](/uslugi/opinia-psychologiczno-pedagogiczna).
 
 ---
 
