@@ -154,7 +154,6 @@ pl: &DEFAULT_PL
     submit: "Wyślij"
 
   footer:
-    pricing: "Cennik"
     legal: "Polityka prywatności"
     rulebook: "Regulamin"
     statutes: "Statut"

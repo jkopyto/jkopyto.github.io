@@ -19,6 +19,8 @@ pl: &DEFAULT_PL
       section: zespol
     - title: "Umów się"
       url: /umow-sie
+    - title: "Cennik"
+      url: "/cennik"
     - title: "Kontakt"
       url: /kontakt
 pl-PL:
