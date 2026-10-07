@@ -3,6 +3,8 @@ layout: page
 title: Rezerwacja potwierdzona
 subtitle: Dziękujemy za umówienie wizyty
 permalink: /potwierdzenie-rezerwacji
+noindex: true
+sitemap: false
 ---
 
 <!-- Success Message Section -->
