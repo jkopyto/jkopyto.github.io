@@ -2,6 +2,7 @@
 layout: page
 title: Rezerwacja potwierdzona
 subtitle: Dziękujemy za umówienie wizyty
+description: "Rezerwacja wizyty w poradni EVEMED potwierdzona. Sprawdź, jak przygotować się do spotkania i jak do nas trafić."
 permalink: /potwierdzenie-rezerwacji
 noindex: true
 sitemap: false

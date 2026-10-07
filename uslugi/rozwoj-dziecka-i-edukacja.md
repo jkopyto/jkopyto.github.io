@@ -1,7 +1,8 @@
 ---
 last_modified: 2025-11-25
-title: Rozwój dziecka i edukacja
+title: "Psycholog dziecięcy, pedagog i logopeda Wrocław"
 layout: page
+description: "Psycholog dziecięcy, pedagog i logopeda we Wrocławiu: konsultacje, terapia logopedyczna, Kids' Skills, trening funkcji poznawczych, Metoda Krakowska."
 ---
 <div class="col-lg-12 text-center mb-5">
 	<h2 class="section-heading text-uppercase">Rozwój dziecka i edukacja</h2>

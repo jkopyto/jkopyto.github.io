@@ -1,7 +1,8 @@
 ---
 last_modified: 2026-08-05
-title: Psychotraumatolog
+title: "Psychotraumatolog Wrocław – terapia traumy"
 layout: page
+description: "Terapia traumy we Wrocławiu z psychotraumatologiem: pomoc po wypadku, przemocy czy nagłej stracie. Praca z natrętnymi wspomnieniami, lękiem i koszmarami."
 ---
 <div class="col-lg-12 text-center mb-5">
 	<h2 class="section-heading text-uppercase">Psychotraumatolog</h2>

@@ -1,11 +1,12 @@
 ---
 last_modified: 2026-10-07
 layout: page
-title: Umów się
-description: Umów wizytę u psychologa, pedagoga, psychotraumatologa we Wrocławiu lub online. Pierwszy krok to zaledwie kilka kliknięć - wybierz termin i specjalistę już teraz!
+title: "Umów wizytę u psychologa lub pedagoga - Wrocław"
+description: "Umów wizytę u psychologa, pedagoga, logopedy lub psychotraumatologa we Wrocławiu lub online. Wybierz specjalistę i termin w kalendarzu – to kilka kliknięć."
 subtitle: Umów się na wizytę lub skontaktuj się z nami
 permalink: /umow-sie
 ---
+
 <section class="booking-intro py-4">
   <div class="container">
     <div class="row">

@@ -1,7 +1,8 @@
 ---
 last_modified: 2025-10-24
 layout: page
-title: Polityka Prywatności
+title: "Polityka prywatności i cookies"
+description: "Polityka prywatności poradni EVEMED: jak przetwarzamy dane z formularza kontaktowego, jakich plików cookies używamy i jakie prawa Ci przysługują."
 ---
 <div class="col-lg-12 text-center">
 	<h2 class="section-heading text-uppercase">Polityka Prywatności</h2>

@@ -1,8 +1,8 @@
 ---
 last_modified: 2025-11-26
 layout: page
-title: Kontakt
-description: Kontakt z Evemed we Wrocławiu. Zadzwoń, napisz email lub wypełnij formularz. Poradnia psychologiczno-pedagogiczna dostępna online i stacjonarnie. Odpowiadamy szybko!
+title: "Kontakt – poradnia, ul. Inowrocławska 56 Wrocław"
+description: "Kontakt z poradnią EVEMED: ul. Inowrocławska 56, Wrocław. Zadzwoń (+48) 724 314 798, napisz na poradnia@evemed.pl lub wyślij wiadomość przez formularz."
 subtitle: Skontaktuj się z nami
 permalink: /kontakt
 ---
