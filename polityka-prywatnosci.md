@@ -1,4 +1,5 @@
 ---
+last_modified: 2025-10-24
 layout: page
 title: Polityka Prywatności
 ---

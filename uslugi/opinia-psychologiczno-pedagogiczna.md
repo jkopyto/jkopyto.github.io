@@ -1,4 +1,5 @@
 ---
+last_modified: 2025-11-25
 title: Opinia
 layout: page
 ---

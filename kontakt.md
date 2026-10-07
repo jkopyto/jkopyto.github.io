@@ -1,4 +1,5 @@
 ---
+last_modified: 2025-11-26
 layout: page
 title: Kontakt
 description: Kontakt z Evemed we Wrocławiu. Zadzwoń, napisz email lub wypełnij formularz. Poradnia psychologiczno-pedagogiczna dostępna online i stacjonarnie. Odpowiadamy szybko!

@@ -1,78 +1,14 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
-<url>
-<loc>https://evemed.pl/</loc>
-<lastmod>2026-10-07T14:10:00+01:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://evemed.pl/umow-sie</loc>
-<lastmod>2026-10-07T16:00:00+02:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://evemed.pl/cennik</loc>
-<lastmod>2026-10-07T14:10:00+01:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://evemed.pl/kontakt</loc>
-<lastmod>2026-10-07T15:37:00+02:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://evemed.pl/uslugi/diagnoza</loc>
-<lastmod>2026-10-07T16:00:00+02:00</lastmod>
-<priority>0.60</priority>
-</url>
-<url>
-<loc>https://evemed.pl/uslugi/wsparcie-doroslych</loc>
-<lastmod>2026-10-07T16:00:00+02:00</lastmod>
-<priority>0.60</priority>
-</url>
-<url>
-<loc>https://evemed.pl/uslugi/rozwoj-dziecka-i-edukacja</loc>
-<lastmod>2025-11-25T19:19:35+00:00</lastmod>
-<priority>0.60</priority>
-</url>
-<url>
-<loc>https://evemed.pl/uslugi/opinia-psychologiczno-pedagogiczna</loc>
-<lastmod>2025-11-25T19:19:35+00:00</lastmod>
-<priority>0.70</priority>
-</url>
-<url>
-<loc>https://evemed.pl/uslugi/biofeedback</loc>
-<lastmod>2025-11-25T19:19:35+00:00</lastmod>
-<priority>0.60</priority>
-</url>
-<url>
-<loc>https://evemed.pl/uslugi/psychotraumatolog</loc>
-<lastmod>2026-08-05T13:10:00+01:00</lastmod>
-<priority>0.60</priority>
-</url>
-<url>
-<loc>https://evemed.pl/assets/docs/Polityka_prywatnosci_cookies_25_11_2025.pdf</loc>
-<lastmod>2025-11-25T19:19:35+00:00</lastmod>
-<priority>0.10</priority>
-</url>
-<url>
-<loc>https://evemed.pl/assets/docs/Regulamin_25_11_2025.pdf</loc>
-<lastmod>2025-11-25T19:19:35+00:00</lastmod>
-<priority>0.10</priority>
-</url>
-<url>
-<loc>https://evemed.pl/assets/docs/Statut_12_12_2025.pdf</loc>
-<lastmod>2025-12-12T117:15:00+00:00</lastmod>
-<priority>0.10</priority>
-</url>
-<url>
-<loc>https://evemed.pl/assets/docs/som_07-10-2026.pdf</loc>
-<lastmod>2026-10-07T14:20:00+01:00</lastmod>
-<priority>0.10</priority>
-</url>
-<url>
-<loc>https://evemed.pl/assets/docs/som_skrocone_07-10-2026.pdf</loc>
-<lastmod>2026-10-07T14:20:00+01:00</lastmod>
-<priority>0.10</priority>
-</url>
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in site.pages -%}
+  {%- unless p.sitemap == false or p.noindex or p.name == '404.html' or p.name == 'sitemap.xml' or p.name == 'test.html' or p.path contains 'assets/' or p.path contains 'favicon' or p.url contains '.json' -%}
+  <url>
+    <loc>{{ p.url | replace:'index.html','' | replace:'.html','' | prepend: site.url }}</loc>
+    {%- if p.last_modified %}<lastmod>{{ p.last_modified | date_to_xmlschema }}</lastmod>{% endif %}
+  </url>
+  {%- endunless -%}
+{%- endfor %}
 </urlset>
