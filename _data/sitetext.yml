@@ -109,7 +109,7 @@ pl: &DEFAULT_PL
 
   team:
     title: "Nasz zespół"
-    text: "Jesteśmy zespołem specjalistek, ale przede wszystkim - pasjonatek ludzkiego umysłu"
+    text: "Jesteśmy zespołem specjalistek i specjalistów, ale przede wszystkim - pasjonatami ludzkiego umysłu"
     subtext:  W EVEMED łączymy nasze różnorodne kompetencje, aby stworzyć miejsce, gdzie każdy - od dziecka po dorosłego - znajdzie zrozumienie i skuteczną pomoc. To, co nas łączy, to naukowa rzetelność, ciągła chęć rozwoju i głębokie przekonanie, że w bezpiecznej relacji drzemie siła do zmiany
     section: zespol
     people:
@@ -154,6 +154,7 @@ pl: &DEFAULT_PL
     submit: "Wyślij"
 
   footer:
+    pricing: "Cennik"
     legal: "Polityka prywatności"
     rulebook: "Regulamin"
     statutes: "Statut"

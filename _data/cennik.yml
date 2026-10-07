@@ -1,0 +1,132 @@
+# Cennik – treść podstrony /cennik
+#
+# Sekcje wyświetlają się w kolejności z tego pliku. Wszystkie pola sekcji są opcjonalne:
+#   title     – nagłówek sekcji
+#   id        – kotwica do linkowania (np. "#pakiety")
+#   highlight – true = nazwy usług jako fioletowe nagłówki
+#   intro     – tekst nad listą usług (markdown, **pogrubienie**)
+#   items     – lista usług:
+#       name     – nazwa (wymagana)
+#       duration – czas w minutach, dopisywane jest " min" (opcjonalne)
+#       price    – cena, dopisywane jest " zł" (wymagana)
+#       details  – linia opisu pod nazwą (opcjonalne)
+#       list     – punkty pod nazwą (opcjonalne); numbered: true = lista numerowana
+#       addons   – dodatkowe pozycje z ceną, wyświetlane jako "> nazwa   cena"
+#   table     – tabela: columns = nagłówki, rows = wiersze (1. kolumna to nazwa, reszta to ceny w zł)
+#   info      – ramka z informacjami pod sekcją (markdown, akapity oddzielone pustą linią)
+#   footnote  – wyróżniona uwaga na końcu sekcji
+#   link      – link pod sekcją: text + url
+
+sections:
+  - title: Konsultacja
+    items:
+      - name: Psychologiczna
+        duration: 50
+        price: 180
+      - name: Pedagogiczna
+        duration: 50
+        price: 180
+      - name: Logopedyczna
+        duration: 50
+        price: 180
+      - name: Psychotraumatologiczna
+        duration: 50
+        price: 180
+
+  - title: Wizyta - koszt sesji pojedynczej
+    items:
+      - name: Psychoterapia
+        duration: 50
+        price: 180
+      - name: Psychotraumatolog
+        duration: 90
+        price: 250
+      - name: Wsparcie dla osób z ADHD/ASD (powyżej 18 r.ż.)
+        duration: 50
+        price: 190
+      - name: Nauka czytania
+        duration: 40
+        price: 130
+      - name: Kids Skill's
+        duration: 50
+        price: 150
+      - name: Trening funkcji poznawczych
+        duration: 45
+        price: 160
+      - name: Zajęcia Fusion
+        duration: 60
+        price: 200
+      - name: TUS/TZA
+        duration: 90
+        price: 130
+    link:
+      text: Sprawdź pakiety
+      url: "#pakiety"
+
+  - highlight: true
+    items:
+      - name: Opinia psychologiczno-pedagogiczna
+        price: 750
+        numbered: true
+        list:
+          - Wywiad z rodzicem/ opiekunem (50 min)
+          - Diagnoza psychologiczna (120 min)
+          - Diagnoza pedagogiczna (120 min)
+        addons:
+          - name: Rozszerzenie OPP o diagnozę ADHD
+            price: 850
+      - name: Diagnoza ADHD dziecka
+        price: 1200
+        details: Obejmuje 3 spotkania (50 min)
+        list:
+          - Wywiad z rodzicem
+          - 2 spotkania diagnostyczne z psychologiem
+      - name: Badanie gotowości szkolnej
+        price: 500
+      - name: Opinia o braku przeciwwskazań do podjęcia pracy
+        price: 200
+      - name: Diagnoza psychologiczna dzieci i młodzieży (do 18 r.ż.)
+        price: 880
+        details: Obejmuje 3 spotkania (50 min)
+        list:
+          - Wywiad z rodzicem
+          - 2 spotkania diagnostyczne z psychologiem
+
+  # Ceny "bez pakietu" powtarzają ceny z sekcji "Wizyta" – zmieniając je, zaktualizuj oba miejsca.
+  - title: Pakiet miesięczny
+    id: pakiety
+    table:
+      columns: [Rodzaj zajęć, Cena pakietu, Cena za 1 zajęcia w pakiecie, Cena bez pakietu]
+      rows:
+        - [Zajęcia Fusion, 700, 175, 200]
+        - [Trening funkcji poznawczych, 600, 150, 160]
+        - [TUS/TZA, 480, 120, 130]
+    info: |
+      **Ważne informacje!**
+
+      Pakiet obejmuje zajęcia prowadzone w cyklu **12 spotkań**. Jeden pakiet odpowiada jednemu miesiącowi pracy i obejmuje udział we wszystkich zaplanowanych spotkaniach w ramach cyklu.
+
+      Płatność za pakiet jest dokonywana z góry, przed rozpoczęciem zajęć.
+
+      Warunkiem skorzystania z pakietu jest podpisanie kontraktu oraz deklaracji udziału w całym cyklu 12 spotkań.
+
+      Zasady odrabiania nieobecności oraz warunki ewentualnego odpracowania zajęć są ustalane podczas podpisywania kontraktu i określane w jego warunkach.
+
+  - title: Diagnoza psychologiczna osób dorosłych
+    intro: >-
+      **Diagnoza psychologiczna** to indywidualny proces, którego zakres zależy od zgłaszanych trudności
+      i celu badania. Obejmuje rozmowę i pogłębiony wywiad dotyczący funkcjonowania, a w zależności od potrzeb
+      także odpowiednio dobrane narzędzia i badania psychologiczne. Proces kończy się omówieniem wyników
+      oraz przygotowaniem pisemnej opinii psychologicznej.
+    items:
+      - name: Konsultacja diagnostyczna
+        price: 200
+      - name: Diagnoza psychologiczna dorosłych (1 spotkanie)
+        price: 300
+      - name: Diagnoza ADHD dorosłych (3 spotkania)
+        price: 1400
+      - name: Diagnoza funkcjonowania intelektualnego (90min)
+        price: 600
+    footnote: >-
+      Pamiętaj! Jeśli po konsultacji zdecydujesz się kontynuować diagnozę, koszt konsultacji zostanie
+      odliczony od ceny całego procesu diagnostycznego.

@@ -1,0 +1,65 @@
+---
+layout: page
+title: Cennik
+description: Cennik Poradni Psychologiczno-Pedagogicznej EVEMED we Wrocławiu - konsultacje, psychoterapia, diagnozy, opinie i pakiety zajęć.
+permalink: /cennik
+---
+<!-- Treść cennika: _data/cennik.yml -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+
+<div class="cennik">
+  <div class="cennik-card">
+    <img class="cennik-logo" src="/assets/img/evemed.svg" alt="" width="1313" height="815" />
+    <h1 class="cennik-title">Cennik</h1>
+
+    {% for section in site.data.cennik.sections %}
+    <section class="cennik-section{% if section.highlight %} cennik-section--highlight{% endif %}"{% if section.id %} id="{{ section.id }}"{% endif %}>
+      {% if section.title %}<h2>{{ section.title }}</h2>{% endif %}
+      {% if section.intro %}<div class="cennik-intro">{{ section.intro | markdownify }}</div>{% endif %}
+
+      {% for item in section.items %}
+      <div class="cennik-item">
+        <div class="cennik-row">
+          <span class="cennik-name">{{ item.name }}</span>
+          {% if item.duration %}<span class="cennik-duration">{{ item.duration }} min</span>{% endif %}
+          <span class="cennik-price">{{ item.price }} zł</span>
+        </div>
+        {% if item.details %}<p class="cennik-details">{{ item.details }}</p>{% endif %}
+        {% if item.list %}
+        {% if item.numbered %}<ol class="cennik-list">{% else %}<ul class="cennik-list">{% endif %}
+          {% for point in item.list %}<li>{{ point }}</li>{% endfor %}
+        {% if item.numbered %}</ol>{% else %}</ul>{% endif %}
+        {% endif %}
+        {% for addon in item.addons %}
+        <div class="cennik-row cennik-addon">
+          <span class="cennik-name">&gt; {{ addon.name }}</span>
+          <span class="cennik-price">{{ addon.price }} zł</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+
+      {% if section.table %}
+      <div class="table-responsive">
+        <table class="cennik-table">
+          <thead>
+            <tr>{% for column in section.table.columns %}<th scope="col">{{ column }}</th>{% endfor %}</tr>
+          </thead>
+          <tbody>
+            {% for row in section.table.rows %}
+            <tr>
+              {% for cell in row %}{% if forloop.first %}<th scope="row">{{ cell }}</th>{% else %}<td>{{ cell }} zł</td>{% endif %}{% endfor %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+
+      {% if section.info %}<div class="cennik-info">{{ section.info | markdownify }}</div>{% endif %}
+      {% if section.footnote %}<p class="cennik-footnote">{{ section.footnote }}</p>{% endif %}
+      {% if section.link %}<a class="cennik-link" href="{{ section.link.url }}">&rarr; {{ section.link.text }}</a>{% endif %}
+    </section>
+    {% endfor %}
+  </div>
+</div>

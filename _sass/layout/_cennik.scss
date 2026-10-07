@@ -1,0 +1,250 @@
+// Cennik page (/cennik)
+$cennik-ink: #40455e;
+$cennik-sage: #8d9a78;
+
+@mixin cennik-serif {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+// gradient behind the whole page, the footer keeps its own white background
+body:has(.cennik) {
+  background: linear-gradient(135deg, #3f524d 0%, #8a9a8b 50%, #55625e 100%) fixed;
+}
+
+.cennik {
+  padding: 3rem 0 4rem;
+  @media (max-width: 767px) {
+    padding: 3.5rem 0 3rem;
+  }
+}
+
+.cennik-card {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 3rem 3.5rem;
+  border-radius: 8px;
+  background: rgba(236, 240, 238, 0.94);
+  color: $cennik-ink;
+  @media (max-width: 767px) {
+    padding: 2.5rem 1rem 2rem;
+  }
+}
+
+// logo hangs over the card's top-right corner, as in the printed price list
+.cennik-logo {
+  position: absolute;
+  top: -45px;
+  right: -35px;
+  width: 190px;
+  height: auto;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3)) drop-shadow(0 8px 14px rgba(0, 0, 0, 0.25));
+  @media (max-width: 767px) {
+    top: -48px;
+    right: 4px;
+    width: 120px;
+  }
+}
+
+.cennik-title {
+  margin: 0 0 1rem;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $cennik-ink;
+  @include cennik-serif;
+  @media (max-width: 767px) {
+    font-size: 2.6rem;
+  }
+}
+
+.cennik-section {
+  padding: 2.5rem 0 0;
+  scroll-margin-top: 90px;
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $primary;
+    @include cennik-serif;
+    // sage line with a dot, as in the printed price list
+    &::after {
+      content: "";
+      display: block;
+      width: 56px;
+      height: 6px;
+      margin-top: 0.5rem;
+      background: radial-gradient(circle at calc(100% - 3px) 50%, $cennik-sage 2.5px, transparent 3px),
+        linear-gradient($cennik-sage, $cennik-sage) left center / calc(100% - 4px) 2px no-repeat;
+    }
+  }
+}
+
+.cennik-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba($cennik-ink, 0.1);
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.cennik-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  @include heading-font;
+  @media (max-width: 575px) {
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+  }
+}
+
+.cennik-name {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.cennik-duration,
+.cennik-price {
+  flex: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.cennik-duration {
+  width: 5.5em;
+}
+
+.cennik-price {
+  min-width: 5.5em;
+  font-weight: 700;
+  text-transform: none;
+}
+
+@media (max-width: 575px) {
+  .cennik-duration,
+  .cennik-price {
+    width: auto;
+    min-width: 0;
+  }
+}
+
+.cennik-section--highlight .cennik-item {
+  padding: 1.1rem 0;
+  > .cennik-row:first-child .cennik-name {
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: $primary;
+    @include cennik-serif;
+    @media (max-width: 575px) {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+.cennik-details,
+.cennik-list {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  @include heading-font;
+}
+
+.cennik-list {
+  padding-left: 1.5rem;
+  li {
+    margin-top: 0.35rem;
+  }
+}
+
+.cennik-addon {
+  margin-top: 0.75rem;
+  font-weight: 700;
+}
+
+.cennik-intro {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.cennik-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.9rem;
+  @include heading-font;
+  th,
+  td {
+    padding: 0.85rem 0.6rem;
+    border: 1px solid rgba($cennik-ink, 0.35);
+    vertical-align: middle;
+  }
+  thead th {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: rgba($cennik-ink, 0.06);
+  }
+  tbody th {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  @media (max-width: 575px) {
+    font-size: 0.8rem;
+    th,
+    td {
+      padding: 0.6rem 0.35rem;
+    }
+    thead th {
+      font-size: 0.65rem;
+    }
+  }
+}
+
+.cennik-info {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: rgba($white, 0.6);
+  text-align: center;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cennik-footnote {
+  margin: 2rem 0 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  @include heading-font;
+}
+
+.cennik-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $primary;
+  @include cennik-serif;
+  font-weight: 600;
+}
