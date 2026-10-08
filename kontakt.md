@@ -1,5 +1,5 @@
 ---
-last_modified: 2025-11-26
+last_modified: 2026-10-08
 layout: page
 title: "Kontakt – poradnia, ul. Inowrocławska 56 Wrocław"
 description: "Kontakt z poradnią EVEMED: ul. Inowrocławska 56, Wrocław. Zadzwoń (+48) 724 314 798, napisz na poradnia@evemed.pl lub wyślij wiadomość przez formularz."

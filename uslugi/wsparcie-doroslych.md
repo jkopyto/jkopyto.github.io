@@ -1,5 +1,5 @@
 ---
-last_modified: 2026-10-07
+last_modified: 2026-10-08
 title: "Psychoterapia i wsparcie dorosłych Wrocław i online"
 layout: page
 description: "Psychoterapia dorosłych we Wrocławiu i online w nurcie CBT: lęk, depresja, stres, wypalenie, trudności w relacjach. Konsultacja, terapia traumy, trening."

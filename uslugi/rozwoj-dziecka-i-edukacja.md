@@ -1,5 +1,5 @@
 ---
-last_modified: 2025-11-25
+last_modified: 2026-10-08
 title: "Psycholog dziecięcy, pedagog i logopeda Wrocław"
 layout: page
 description: "Psycholog dziecięcy, pedagog i logopeda we Wrocławiu: konsultacje, terapia logopedyczna, Kids' Skills, trening funkcji poznawczych, Metoda Krakowska."

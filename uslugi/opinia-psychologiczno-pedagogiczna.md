@@ -1,5 +1,5 @@
 ---
-last_modified: 2025-11-25
+last_modified: 2026-10-08
 title: "Opinia psychologiczno-pedagogiczna Wrocław"
 layout: page
 description: "Opinia psychologiczno-pedagogiczna dla szkoły we Wrocławiu: diagnoza dysleksji, trudności w nauce i emocji w 3 spotkaniach. Pisemne zalecenia."

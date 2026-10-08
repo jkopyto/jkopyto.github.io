@@ -1,5 +1,5 @@
 ---
-last_modified: 2025-11-25
+last_modified: 2026-10-08
 title: "EEG-Biofeedback Wrocław – trening pracy mózgu"
 layout: page
 description: "EEG-Biofeedback we Wrocławiu: bezbolesny, nieinwazyjny trening pracy mózgu dla dzieci i dorosłych. Wsparcie koncentracji, uwagi i redukcji stresu."

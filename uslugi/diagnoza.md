@@ -1,5 +1,5 @@
 ---
-last_modified: 2026-10-07
+last_modified: 2026-10-08
 title: "Diagnoza psychologiczna dzieci i dorosłych Wrocław"
 layout: page
 description: "Diagnoza psychologiczna, pedagogiczna, logopedyczna i ADHD (test Conners-3) we Wrocławiu. Rzetelne badanie i konkretne zalecenia. Umów się w EVEMED."
