@@ -11,7 +11,7 @@ permalink: /umow-sie
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
-        <h3 class="mb-4">Rezerwacja wizyty</h3>
+        <h1 class="h3 mb-4">Rezerwacja wizyty</h1>
         <p class="lead text-muted">
           Zarezerwuj wizytę online w kilku prostych krokach. Wybierz dogodny termin i&nbsp;specjalistę, 
           który najlepiej odpowiada Twoim potrzebom.

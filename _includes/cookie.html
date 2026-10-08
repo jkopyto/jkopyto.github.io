@@ -1,5 +1,5 @@
 <!-- Cookie Consent Banner -->
-<div id="cookie-consent-banner" class="cookie-banner" style="display:none;">
+<div id="cookie-consent-banner" class="cookie-banner" style="display: none">
   <div class="cookie-banner-content">
     <div class="cookie-banner-icon">
       <i class="fas fa-cookie-bite"></i>
@@ -7,17 +7,26 @@
     <div class="cookie-banner-text">
       <h5>Szanujemy Twoją prywatność</h5>
       <p>
-        Ta strona wykorzystuje pliki cookies w celu zapewnienia prawidłowego działania oraz analizy ruchu (Google Analytics z anonimizacją IP). 
-        Możesz zaakceptować wszystkie pliki cookies lub wybrać tylko niezbędne. 
-        Więcej informacji znajdziesz w naszej 
-        <a href="/polityka-prywatnosci" class="cookie-policy-link">Polityce prywatności</a>.
+        Ta strona wykorzystuje pliki cookies w celu zapewnienia prawidłowego
+        działania oraz analizy ruchu (Google Analytics z anonimizacją IP).
+        Możesz zaakceptować wszystkie pliki cookies lub wybrać tylko niezbędne.
+        Więcej informacji znajdziesz w naszej
+        <a
+          target="_blank"
+          href="/assets/docs/Polityka_prywatnosci_cookies_25_11_2025.pdf"
+          class="cookie-policy-link"
+          >Polityce prywatności</a
+        >.
       </p>
     </div>
     <div class="cookie-banner-actions">
       <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">
         <i class="fas fa-check"></i> Akceptuję wszystkie
       </button>
-      <button id="cookie-reject-optional" class="cookie-btn cookie-btn-secondary">
+      <button
+        id="cookie-reject-optional"
+        class="cookie-btn cookie-btn-secondary"
+      >
         <i class="fas fa-times"></i> Tylko niezbędne
       </button>
       <button id="cookie-settings" class="cookie-btn cookie-btn-outline">
@@ -28,7 +37,7 @@
 </div>
 
 <!-- Cookie Settings Modal -->
-<div id="cookie-settings-modal" class="cookie-modal" style="display:none;">
+<div id="cookie-settings-modal" class="cookie-modal" style="display: none">
   <div class="cookie-modal-overlay"></div>
   <div class="cookie-modal-content">
     <div class="cookie-modal-header">
@@ -45,15 +54,16 @@
             <h5>Niezbędne cookies</h5>
           </div>
           <label class="cookie-toggle">
-            <input type="checkbox" id="cookie-necessary" checked disabled>
+            <input type="checkbox" id="cookie-necessary" checked disabled />
             <span class="cookie-toggle-slider"></span>
           </label>
         </div>
         <p class="cookie-category-description">
-          Te pliki są wymagane do podstawowego działania strony. Nie można ich wyłączyć.
+          Te pliki są wymagane do podstawowego działania strony. Nie można ich
+          wyłączyć.
         </p>
       </div>
-      
+
       <div class="cookie-category">
         <div class="cookie-category-header">
           <div class="cookie-category-title">
@@ -61,12 +71,13 @@
             <h5>Cookies analityczne</h5>
           </div>
           <label class="cookie-toggle">
-            <input type="checkbox" id="cookie-analytics">
+            <input type="checkbox" id="cookie-analytics" />
             <span class="cookie-toggle-slider"></span>
           </label>
         </div>
         <p class="cookie-category-description">
-          Pomagają nam zrozumieć, jak odwiedzający korzystają ze strony. Wszystkie dane są anonimowe.
+          Pomagają nam zrozumieć, jak odwiedzający korzystają ze strony.
+          Wszystkie dane są anonimowe.
         </p>
       </div>
     </div>
@@ -79,148 +90,152 @@
 </div>
 
 <script>
-(function() {
-  'use strict';
-  const banner = document.getElementById('cookie-consent-banner');
-  const acceptAllBtn = document.getElementById('cookie-accept-all');
-  const rejectOptionalBtn = document.getElementById('cookie-reject-optional');
-  const settingsBtn = document.getElementById('cookie-settings');
-  const modal = document.getElementById('cookie-settings-modal');
-  const modalClose = document.getElementById('cookie-modal-close');
-  const saveSettingsBtn = document.getElementById('cookie-save-settings');
-  const analyticsToggle = document.getElementById('cookie-analytics');
-  
-  const consent = getConsent();
-  
-  if (consent === null) {
-    setTimeout(() => {
-      banner.style.display = 'block';
-      banner.classList.add('cookie-banner-show');
-    }, 1000);
-  } else {
-    applyConsent(consent);
-  }
-  
-  acceptAllBtn.addEventListener('click', function() {
-    const consent = {
-      necessary: true,
-      analytics: true,
-      timestamp: Date.now()
-    };
-    saveConsent(consent);
-    hideBanner();
-    applyConsent(consent);
-  });
-  
-  rejectOptionalBtn.addEventListener('click', function() {
-    const consent = {
-      necessary: true,
-      analytics: false,
-      timestamp: Date.now()
-    };
-    saveConsent(consent);
-    hideBanner();
-    applyConsent(consent);
-  });
-  
-  settingsBtn.addEventListener('click', function() {
-    modal.style.display = 'flex';
-    setTimeout(() => {
-      modal.classList.add('cookie-modal-show');
-    }, 10);
-    
-    const currentConsent = getConsent();
-    if (currentConsent) {
-      analyticsToggle.checked = currentConsent.analytics;
+  ;(function () {
+    "use strict"
+    const banner = document.getElementById("cookie-consent-banner")
+    const acceptAllBtn = document.getElementById("cookie-accept-all")
+    const rejectOptionalBtn = document.getElementById("cookie-reject-optional")
+    const settingsBtn = document.getElementById("cookie-settings")
+    const modal = document.getElementById("cookie-settings-modal")
+    const modalClose = document.getElementById("cookie-modal-close")
+    const saveSettingsBtn = document.getElementById("cookie-save-settings")
+    const analyticsToggle = document.getElementById("cookie-analytics")
+
+    const consent = getConsent()
+
+    if (consent === null) {
+      setTimeout(() => {
+        banner.style.display = "block"
+        banner.classList.add("cookie-banner-show")
+      }, 1000)
+    } else {
+      applyConsent(consent)
     }
-  });
-  
-  modalClose.addEventListener('click', closeModal);
-  modal.querySelector('.cookie-modal-overlay').addEventListener('click', closeModal);
-  
-  saveSettingsBtn.addEventListener('click', function() {
-    const consent = {
-      necessary: true,
-      analytics: analyticsToggle.checked,
-      timestamp: Date.now()
-    };
-    saveConsent(consent);
-    hideBanner();
-    closeModal();
-    applyConsent(consent);
-  });
-  
-  function getConsent() {
-    try {
-      const stored = localStorage.getItem('evemed_cookie_consent');
-      return stored ? JSON.parse(stored) : null;
-    } catch (e) {
-      return null;
+
+    acceptAllBtn.addEventListener("click", function () {
+      const consent = {
+        necessary: true,
+        analytics: true,
+        timestamp: Date.now(),
+      }
+      saveConsent(consent)
+      hideBanner()
+      applyConsent(consent)
+    })
+
+    rejectOptionalBtn.addEventListener("click", function () {
+      const consent = {
+        necessary: true,
+        analytics: false,
+        timestamp: Date.now(),
+      }
+      saveConsent(consent)
+      hideBanner()
+      applyConsent(consent)
+    })
+
+    settingsBtn.addEventListener("click", function () {
+      modal.style.display = "flex"
+      setTimeout(() => {
+        modal.classList.add("cookie-modal-show")
+      }, 10)
+
+      const currentConsent = getConsent()
+      if (currentConsent) {
+        analyticsToggle.checked = currentConsent.analytics
+      }
+    })
+
+    modalClose.addEventListener("click", closeModal)
+    modal
+      .querySelector(".cookie-modal-overlay")
+      .addEventListener("click", closeModal)
+
+    saveSettingsBtn.addEventListener("click", function () {
+      const consent = {
+        necessary: true,
+        analytics: analyticsToggle.checked,
+        timestamp: Date.now(),
+      }
+      saveConsent(consent)
+      hideBanner()
+      closeModal()
+      applyConsent(consent)
+    })
+
+    function getConsent() {
+      try {
+        const stored = localStorage.getItem("evemed_cookie_consent")
+        return stored ? JSON.parse(stored) : null
+      } catch (e) {
+        return null
+      }
     }
-  }
-  
-  function saveConsent(consent) {
-    try {
-      localStorage.setItem('evemed_cookie_consent', JSON.stringify(consent));
-    } catch (e) {
-      console.error('Nie można zapisać zgody na cookies');
+
+    function saveConsent(consent) {
+      try {
+        localStorage.setItem("evemed_cookie_consent", JSON.stringify(consent))
+      } catch (e) {
+        console.error("Nie można zapisać zgody na cookies")
+      }
     }
-  }
-  
-  function hideBanner() {
-    banner.classList.remove('cookie-banner-show');
-    setTimeout(() => {
-      banner.style.display = 'none';
-    }, 300);
-  }
-  
-  function closeModal() {
-    modal.classList.remove('cookie-modal-show');
-    setTimeout(() => {
-      modal.style.display = 'none';
-    }, 300);
-  }
-  
-  function applyConsent(consent) {
-    // gtag() and the 'denied' defaults are defined in head.html
-    const state = consent.analytics ? 'granted' : 'denied';
-    gtag('consent', 'update', {
-      analytics_storage: state,
-      ad_storage: state,
-      ad_user_data: state,
-      ad_personalization: state
-    });
-    if (consent.analytics) {
-      loadGTM();
-      enableGoogleAnalytics();
+
+    function hideBanner() {
+      banner.classList.remove("cookie-banner-show")
+      setTimeout(() => {
+        banner.style.display = "none"
+      }, 300)
     }
-  }
 
-  function enableGoogleAnalytics() {
-    if (document.getElementById('gtag-evemed')) return;
+    function closeModal() {
+      modal.classList.remove("cookie-modal-show")
+      setTimeout(() => {
+        modal.style.display = "none"
+      }, 300)
+    }
 
-    gtag('js', new Date());
-    gtag('config', "{{ site.analytics.google }}", {
-      'cookie_flags': 'SameSite=None;Secure'
-    });
+    function applyConsent(consent) {
+      // gtag() and the 'denied' defaults are defined in head.html
+      const state = consent.analytics ? "granted" : "denied"
+      gtag("consent", "update", {
+        analytics_storage: state,
+        ad_storage: state,
+        ad_user_data: state,
+        ad_personalization: state,
+      })
+      if (consent.analytics) {
+        loadGTM()
+        enableGoogleAnalytics()
+      }
+    }
 
-    const script = document.createElement('script');
-    script.id = 'gtag-evemed';
-    script.src = "https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google }}";
-    script.async = true;
-    document.head.appendChild(script);
-  }
+    function enableGoogleAnalytics() {
+      if (document.getElementById("gtag-evemed")) return
 
-  // GTM and the AW tag load only after consent, so nothing fires before it
-  function loadGTM() {
-    if (document.getElementById('gtm-evemed')) return;
+      gtag("js", new Date())
+      gtag("config", "{{ site.analytics.google }}", {
+        cookie_flags: "SameSite=None;Secure",
+      })
 
-    dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-    const script = document.createElement('script');
-    script.id = 'gtm-evemed';
-    script.src = 'https://www.googletagmanager.com/gtm.js?id={{ site.analytics.gtm }}';
-    script.async = true;
-    document.head.appendChild(script);
-  }
-})();
+      const script = document.createElement("script")
+      script.id = "gtag-evemed"
+      script.src =
+        "https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google }}"
+      script.async = true
+      document.head.appendChild(script)
+    }
+
+    // GTM and the AW tag load only after consent, so nothing fires before it
+    function loadGTM() {
+      if (document.getElementById("gtm-evemed")) return
+
+      dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" })
+      const script = document.createElement("script")
+      script.id = "gtm-evemed"
+      script.src =
+        "https://www.googletagmanager.com/gtm.js?id={{ site.analytics.gtm }}"
+      script.async = true
+      document.head.appendChild(script)
+    }
+  })()
 </script>

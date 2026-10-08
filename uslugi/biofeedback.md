@@ -5,7 +5,8 @@ layout: page
 description: "EEG-Biofeedback we Wrocławiu: bezbolesny, nieinwazyjny trening pracy mózgu dla dzieci i dorosłych. Wsparcie koncentracji, uwagi i redukcji stresu."
 ---
 <div class="col-lg-12 text-center mb-5">
-	<h2 class="section-heading text-uppercase">Biofeedback</h2>
+	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
+	{% include location-line.html %}
 </div>
 
 **Czym jest EEG-Biofeedback?** To nowoczesna, oparta na badaniach naukowych metoda terapeutyczna, która pozwala na trenowanie pracy mózgu w czasie rzeczywistym. Można ją porównać do ćwiczeń na siłowni, ale zamiast mięśni, wzmacniamy i optymalizujemy działanie naszych fal mózgowych. Metoda opiera się na zjawisku neuroplastyczności – niezwykłej zdolności mózgu do tworzenia nowych połączeń nerwowych przez całe życie.

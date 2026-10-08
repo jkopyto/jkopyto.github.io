@@ -5,7 +5,8 @@ layout: page
 description: "Psychoterapia dorosłych we Wrocławiu i online w nurcie CBT: lęk, depresja, stres, wypalenie, trudności w relacjach. Konsultacja, terapia traumy, trening."
 ---
 <div class="col-lg-12 text-center mb-5">
-	<h2 class="section-heading text-uppercase">Wsparcie dorosłych</h2>
+	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
+	{% include location-line.html %}
 </div>
 
 Tworzymy bezpieczną przestrzeń, w której możesz swobodnie przyjrzeć się swoim emocjom, myślom i wzorcom zachowań. Wierzymy, że terapia jest partnerską podróżą, podczas której towarzyszymy Ci w odkrywaniu Twoich wewnętrznych zasobów. Korzystając ze sprawdzonych metod pomagamy rozwijać skuteczne strategie radzenia sobie z lękiem, stresem czy depresją, abyś mógł/mogła żyć pełniej i w zgodzie z własnymi wartościami
@@ -34,7 +35,7 @@ Czujesz, że trudniej Ci się skoncentrować, masz "mgłę mózgową", a Twoja p
 
 ---
 
-# Czym charakteryzują się nurty, w których pracujemy?
+## Czym charakteryzują się nurty, w których pracujemy?
 ### Terapia poznawczo-behawioralna (CBT - Cognitive Behavioral Therapy)
 To jedna z najlepiej przebadanych i najskuteczniejszych form terapii. Jej głównym założeniem jest to, że nasze myśli, emocje i zachowania są ze sobą połączone. W trakcie terapii uczymy się, jak rozpoznawać i zmieniać negatywne wzorce myślenia (schematy poznawcze), które prowadzą do trudnych emocji i niekorzystnych zachowań. CBT jest terapią konkretną, skoncentrowaną na problemie "tu i teraz" i dającą praktyczne narzędzia do radzenia sobie w codziennym życiu.
 

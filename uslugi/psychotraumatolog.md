@@ -5,7 +5,8 @@ layout: page
 description: "Terapia traumy we Wrocławiu z psychotraumatologiem: pomoc po wypadku, przemocy czy nagłej stracie. Praca z natrętnymi wspomnieniami, lękiem i koszmarami."
 ---
 <div class="col-lg-12 text-center mb-5">
-	<h2 class="section-heading text-uppercase">Psychotraumatolog</h2>
+	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
+	{% include location-line.html %}
 </div>
 
 **Kim jest psychotraumatolog?** To specjalista, który posiada wiedzę i narzędzia, aby pomagać osobom, które doświadczyły zdarzeń traumatycznych – jednorazowych lub długotrwałych. Jego rolą jest stworzenie bezpiecznego środowiska, w którym możliwe staje się przepracowanie trudnych wspomnieň i odzyskanie poczucia kontroli nad własnym życiem.

@@ -6,7 +6,8 @@ description: "Opinia psychologiczno-pedagogiczna dla szkoły we Wrocławiu: diag
 ---
 
 <div class="col-lg-12 text-center mb-5">
-	<h2 class="section-heading text-uppercase">Opinia Psychologiczno - Pedagogiczna</h2>
+	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
+	{% include location-line.html %}
 </div>
 
 Zastanawiasz się, skąd biorą się trudności Twojego dziecka w szkole? Chcesz lepiej zrozumieć jego świat emocji i relacji z innymi? A może po prostu pragniesz odkryć jego pełen potencjał i dowiedzieć się, jak najskuteczniej wspierać jego rozwój?

@@ -110,6 +110,13 @@
   margin-bottom: 1rem;
 }
 
+// page H1s carry the long SEO title, keep them to ~3 lines on phones
+@media (max-width: 576px) {
+  h1.section-heading {
+    font-size: 1.5rem;
+  }
+}
+
 // Responsive adjustments
 @media (max-width: 768px) {
   .contact-page-header {

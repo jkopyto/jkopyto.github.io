@@ -5,7 +5,8 @@ layout: page
 description: "Diagnoza psychologiczna, pedagogiczna, logopedyczna i ADHD (test Conners-3) we Wrocławiu. Rzetelne badanie i konkretne zalecenia. Umów się w EVEMED."
 ---
 <div class="col-lg-12 text-center">
-	<h2 class="section-heading text-uppercase">Diagnoza</h2>
+	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
+	{% include location-line.html %}
 </div>
 Trafna diagnoza to nie etykieta, ale mapa, która pozwala zrozumieć źródło trudności i wyznaczyć najlepszy kierunek działania. Dzięki rzetelnym narzędziom i wiedzy naszych specjalistów pomagamy przełożyć niewiadome na konkretne odpowiedzi, otwierając drogę do skutecznej pomocy i lepszego zrozumienia indywidualnych potrzeb
 

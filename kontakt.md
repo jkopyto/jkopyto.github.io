@@ -7,6 +7,10 @@ subtitle: Skontaktuj się z nami
 permalink: /kontakt
 ---
 
+<div class="col-lg-12 text-center">
+	<h1 class="section-heading text-uppercase">Kontakt</h1>
+</div>
+
 <section class="contact-info-section py-5">
   <div class="container">
     <div class="row" itemscope itemtype="https://schema.org/MedicalBusiness">

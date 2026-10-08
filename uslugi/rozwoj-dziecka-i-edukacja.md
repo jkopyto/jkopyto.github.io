@@ -5,7 +5,8 @@ layout: page
 description: "Psycholog dziecięcy, pedagog i logopeda we Wrocławiu: konsultacje, terapia logopedyczna, Kids' Skills, trening funkcji poznawczych, Metoda Krakowska."
 ---
 <div class="col-lg-12 text-center mb-5">
-	<h2 class="section-heading text-uppercase">Rozwój dziecka i edukacja</h2>
+	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
+	{% include location-line.html %}
 </div>
 
 Każde dziecko ma w sobie niezwykły potencjał. Czasem potrzebuje tylko odpowiedniego wsparcia, aby go odkryć i w pełni rozwinąć. W EVEMED pomagamy dzieciom i młodzieży pokonywać trudności w nauce, radzić sobie z emocjami i budować zdrowe relacje z rówieśnikami. W atmosferze akceptacji i zaufania wspieramy je w odkrywaniu ich mocnych stron i rozwijaniu pewności siebie.
