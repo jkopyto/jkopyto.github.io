@@ -5,12 +5,17 @@
       <i class="fas fa-cookie-bite"></i>
     </div>
     <div class="cookie-banner-text">
-      <h5>Szanujemy Twoją prywatność</h5>
+      <p class="cookie-heading">Szanujemy Twoją prywatność</p>
       <p>
-        Ta strona wykorzystuje pliki cookies w celu zapewnienia prawidłowego
-        działania oraz analizy ruchu (Google Analytics z anonimizacją IP).
-        Możesz zaakceptować wszystkie pliki cookies lub wybrać tylko niezbędne.
-        Więcej informacji znajdziesz w naszej
+        <span class="d-none d-sm-inline">
+          Ta strona wykorzystuje pliki cookies w celu zapewnienia prawidłowego
+          działania oraz analizy ruchu (Google Analytics z anonimizacją IP).
+          Możesz zaakceptować wszystkie pliki cookies lub wybrać tylko niezbędne.
+          Więcej informacji znajdziesz w naszej
+        </span>
+        <span class="d-sm-none">
+          Używamy cookies do działania strony i analizy ruchu. Więcej w
+        </span>
         <a
           target="_blank"
           href="/assets/docs/Polityka_prywatnosci_cookies_25_11_2025.pdf"
@@ -21,7 +26,7 @@
     </div>
     <div class="cookie-banner-actions">
       <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">
-        <i class="fas fa-check"></i> Akceptuję wszystkie
+        <i class="fas fa-check"></i> Akceptuję<span class="d-none d-sm-inline"> wszystkie</span>
       </button>
       <button
         id="cookie-reject-optional"
@@ -41,7 +46,7 @@
   <div class="cookie-modal-overlay"></div>
   <div class="cookie-modal-content">
     <div class="cookie-modal-header">
-      <h4>Ustawienia prywatności</h4>
+      <p class="cookie-heading">Ustawienia prywatności</p>
       <button id="cookie-modal-close" class="cookie-modal-close">
         <i class="fas fa-times"></i>
       </button>
@@ -51,10 +56,10 @@
         <div class="cookie-category-header">
           <div class="cookie-category-title">
             <i class="fas fa-shield-alt"></i>
-            <h5>Niezbędne cookies</h5>
+            <p class="cookie-heading">Niezbędne cookies</p>
           </div>
           <label class="cookie-toggle">
-            <input type="checkbox" id="cookie-necessary" checked disabled />
+            <input type="checkbox" id="cookie-necessary" checked disabled aria-label="Niezbędne cookies" />
             <span class="cookie-toggle-slider"></span>
           </label>
         </div>
@@ -68,10 +73,10 @@
         <div class="cookie-category-header">
           <div class="cookie-category-title">
             <i class="fas fa-chart-bar"></i>
-            <h5>Cookies analityczne</h5>
+            <p class="cookie-heading">Cookies analityczne</p>
           </div>
           <label class="cookie-toggle">
-            <input type="checkbox" id="cookie-analytics" />
+            <input type="checkbox" id="cookie-analytics" aria-label="Analityczne cookies" />
             <span class="cookie-toggle-slider"></span>
           </label>
         </div>
