@@ -6,6 +6,8 @@ description: "Terapia traumy we Wrocławiu z psychotraumatologiem: pomoc po wypa
 specialists:
   - "mgr Magdalena Jaworska"
 booking_email: m.jaworska@evemed.pl
+svc_name: "Terapia traumy z psychotraumatologiem"
+svc_type: "Terapia traumy"
 ---
 
 <div class="col-lg-12 text-center mb-5">
@@ -33,17 +35,3 @@ Jeśli skutki tych zdarzeń – takie jak natrętne wspomnienia (flashbacki), ko
 Celem umówienia wizyty u psychotraumatolog **mgr Magdaleny Jaworskiej** prosimy o kontakt mailowy lub telefon.
 
 {% include service-cta.html %}
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  "name": "Psychotraumatolog",
-  "description": "Nie wiesz jak poradzić sobie z lękami? Trudne sytuacje Cię przygnębiają? Psychotraumatolog udzieli Ci wsparcia i pomoże wyjść z trudnej sytuacji",
-  "specialty": "Psychotraumatologia",
-  "mainContentOfPage": {
-    "@type": "WebPageElement",
-    "cssSelector": ".container"
-  }
-}
-</script>

@@ -1,0 +1,43 @@
+{%- comment -%}
+  Service page graph: breadcrumb, the page, and the service it describes.
+  Front matter: svc_name, svc_type, svc_desc (optional, defaults to description).
+  The clinic itself lives in schema-org.html and is referenced by @id.
+{%- endcomment -%}
+{%- assign page_url = site.url | append: page.url | remove: '.html' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ page_url }}#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Evemed", "item": "{{ site.url }}/" },
+        { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "{{ site.url }}/#uslugi" },
+        { "@type": "ListItem", "position": 3, "name": {{ page.svc_name | jsonify }} }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ page_url }}#webpage",
+      "url": "{{ page_url }}",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "inLanguage": "pl-PL",
+      "isPartOf": { "@id": "{{ site.url }}/#website" },
+      "breadcrumb": { "@id": "{{ page_url }}#breadcrumb" },
+      "mainEntity": { "@id": "{{ page_url }}#service" }
+    },
+    {
+      "@type": "Service",
+      "@id": "{{ page_url }}#service",
+      "name": {{ page.svc_name | jsonify }},
+      "description": {{ page.svc_desc | default: page.description | jsonify }},
+      "serviceType": {{ page.svc_type | jsonify }},
+      "url": "{{ page_url }}",
+      "provider": { "@id": "{{ site.url }}/#clinic" },
+      "areaServed": { "@type": "City", "name": "Wrocław" }
+    }
+  ]
+}
+</script>

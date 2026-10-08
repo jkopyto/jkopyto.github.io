@@ -5,6 +5,8 @@ layout: page
 description: "Psychoterapia dorosłych we Wrocławiu i online w nurcie CBT: lęk, depresja, stres, wypalenie, trudności w relacjach. Konsultacja, terapia traumy, trening."
 specialists:
   - "mgr Aleksandra Kopyto"
+svc_name: "Psychoterapia i wsparcie psychologiczne dorosłych"
+svc_type: "Psychoterapia"
 ---
 <div class="col-lg-12 text-center mb-5">
 	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
@@ -50,17 +52,3 @@ Nurt ten uczy nas, jak przestać walczyć z trudnymi myślami i emocjami. Zamias
 To krótkoterminowe podejście, które – jak sama nazwa wskazuje – koncentruje się na rozwiązaniach, a nie na dogłębnym analizowaniu problemów. Zamiast pytać "dlaczego jest źle?", terapeuta TSR pyta "co małego możemy zrobić, żeby było trochę lepiej?". Szukamy Twoich mocnych stron, zasobów i tych momentów w życiu, kiedy problem nie występował. To terapia bardzo praktyczna, zorientowana na przyszłość i budowanie pożądanych zmian krok po kroku.
 
 {% include service-cta.html %}
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  "name": "Wsparcie dorosłych",
-  "description": "Pomoc i terapia osób dorosłych w radzeniu sobie z lękami i zrozumieniem samego siebie",
-  "specialty": "Psychologia dorosłych",
-  "mainContentOfPage": {
-    "@type": "WebPageElement",
-    "cssSelector": ".container"
-  }
-}
-</script>

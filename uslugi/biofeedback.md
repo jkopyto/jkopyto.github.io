@@ -6,6 +6,8 @@ description: "EEG-Biofeedback we Wrocławiu: bezbolesny, nieinwazyjny trening pr
 specialists:
   - "mgr Joanna Chryplewicz"
   - "mgr Aleksandra Kopyto"
+svc_name: "Trening EEG-Biofeedback"
+svc_type: "Neurofeedback"
 ---
 <div class="col-lg-12 text-center mb-5">
 	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
@@ -27,17 +29,3 @@ specialists:
 - Poprawy funkcji poznawczych u dorosłych (pamięć, kreatywność) 
 
 {% include service-cta.html %}
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  "name": "Biofeedback Wrocław",
-  "description": "Bezbolesna i nieinwazyjny trening pracy mózgu",
-  "specialty": "Wspomaganie koncentracji",
-  "mainContentOfPage": {
-    "@type": "WebPageElement",
-    "cssSelector": ".container"
-  }
-}
-</script>

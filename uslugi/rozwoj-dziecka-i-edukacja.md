@@ -8,6 +8,8 @@ specialists:
   - "mgr Monika Machowska"
   - "mgr Magdalena Karasewicz"
   - "mgr Łukasz Betlewicz"
+svc_name: "Wsparcie rozwoju dziecka i edukacji"
+svc_type: "Terapia dzieci i młodzieży"
 ---
 <div class="col-lg-12 text-center mb-5">
 	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
@@ -54,17 +56,3 @@ Jeśli masz wrażenie, że Twoje dziecko potrzebuje ciągłych korepetycji, a mi
 To sprawdzona, oparta na badaniach naukowych metoda, która systematycznie i skutecznie wprowadza dziecko w świat liter i słów. Opiera się na pracy z sylabami, co jest zgodne z naturalnym rozwojem percepcji dziecka. Jest niezwykle pomocna dla dzieci z grupy ryzyka dysleksji, z opóźnionym rozwojem mowy czy z ogólnymi trudnościami w nauce. Zajęcia prowadzone w formie atrakcyjnych zabaw językowych sprawiają, że nauka czytania staje się fascynującą przygodą, a nie żmudnym obowiązkiem.
 
 {% include service-cta.html %}
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  "name": "Rozwój dziecka i edukacja",
-  "description": "Wsparcie i terapia dzieci i młodzieży z trudnościami emocjonalnymi oraz radzeniu sobie ze stresem",
-  "specialty": "Psychologia dziecka",
-  "mainContentOfPage": {
-    "@type": "WebPageElement",
-    "cssSelector": ".container"
-  }
-}
-</script>

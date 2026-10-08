@@ -13,7 +13,7 @@ permalink: /kontakt
 
 <section class="contact-info-section py-5">
   <div class="container">
-    <div class="row" itemscope itemtype="https://schema.org/MedicalBusiness">
+    <div class="row" itemscope itemtype="https://schema.org/MedicalBusiness" itemid="{{ site.url }}/#clinic">
       <a href="{{ site.google.maps.url }}" target="_blank" class="col-lg-4 col-md-6 mb-4">
         <div class="contact-info-card text-center" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
           <div class="contact-icon mb-3">

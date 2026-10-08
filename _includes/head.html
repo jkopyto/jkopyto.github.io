@@ -19,6 +19,8 @@
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | replace:'.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:image" content="https://evemed.pl/assets/img/logo.png" />
   <meta property="og:locale" content="pl_PL" />
+  {% include schema-org.html %}
+  {% if page.svc_name %}{% include schema-service.html %}{% endif %}
   <!-- Consent Mode v2 defaults: GTM loads only after consent, see cookie.html -->
   <script>
   window.dataLayer = window.dataLayer || [];

@@ -1,0 +1,60 @@
+{%- comment -%} Site-wide entity graph: the clinic (one @id for the whole site)
+and the website. Pages refer to the clinic by "@id" only, never by repeating it.
+{%- endcomment -%} {%- assign clinic_id = site.url | append: '/#clinic' -%} {%-
+assign prices = site.data.cennik.sections | map: 'items' | map: 'price' |
+compact | sort -%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalBusiness",
+        "@id": "{{ clinic_id }}",
+        "name": "EVEMED - Niepubliczna Poradnia Psychologiczno-Pedagogiczna",
+        "alternateName": "Evemed",
+        "url": "{{ site.url }}/",
+        "logo": "{{ site.url }}/assets/img/logo.png",
+        "image": "{{ site.url }}/assets/img/logo.png",
+        "telephone": "{{ site.contact.phone.val }}",
+        "email": "{{ site.contact.email }}",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Inowrocławska 56",
+          "addressLocality": "Wrocław",
+          "postalCode": "53-648",
+          "addressCountry": "PL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.1176449,
+          "longitude": 17.0144858
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          }
+        ],
+        "priceRange": "{{ prices.first }}-{{ prices.last }} PLN",
+        "areaServed": { "@type": "City", "name": "Wrocław" },
+        "availableLanguage": ["pl"],
+        "sameAs": [
+          "{{ site.google.maps.url }}"
+          {%- for social in site.data.sitetext[site.locale].footer.social %},
+          "{{ social.url }}"
+          {%- endfor %}
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}/#website",
+        "url": "{{ site.url }}/",
+        "name": "{{ site.title }}",
+        "inLanguage": "pl-PL",
+        "publisher": { "@id": "{{ clinic_id }}" }
+      }
+    ]
+  }
+</script>
