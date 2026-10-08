@@ -12,9 +12,10 @@
 pl: &DEFAULT_PL
   header:
     title: Witaj w naszej poradni!
-    text: Jak możemy Ci dziś pomóc?
-    button: Więcej
-    buttonlink: "#uslugi"
+    text: Poradnia psychologiczno-pedagogiczna we Wrocławiu i online
+    button: Umów wizytę
+    buttonlink: "/umow-sie"
+    callbutton: Zadzwoń
 
   services:
     title: "Usługi"
