@@ -16,41 +16,56 @@
 #   info      – ramka z informacjami pod sekcją (markdown, akapity oddzielone pustą linią)
 #   footnote  – wyróżniona uwaga na końcu sekcji
 #   link      – link pod sekcją: text + url
+#
+# Pole item.link (np. /uslugi/diagnoza) zamienia nazwę usługi w link do jej podstrony,
+# a najniższa cena z takich pozycji trafia do "Cena: od … zł" na tej podstronie (_includes/service-cta.html).
 
 sections:
   - title: Konsultacja
+    id: konsultacje
     items:
       - name: Psychologiczna
+        link: /uslugi/wsparcie-doroslych
         duration: 50
         price: 180
       - name: Pedagogiczna
+        link: /uslugi/rozwoj-dziecka-i-edukacja
         duration: 50
         price: 180
       - name: Logopedyczna
+        link: /uslugi/rozwoj-dziecka-i-edukacja
         duration: 50
         price: 180
       - name: Psychotraumatologiczna
+        link: /uslugi/psychotraumatolog
         duration: 50
         price: 180
 
   - title: Wizyta - koszt sesji pojedynczej
+    id: wizyty
     items:
       - name: Psychoterapia
+        link: /uslugi/wsparcie-doroslych
         duration: 50
         price: 180
       - name: Psychotraumatolog
+        link: /uslugi/psychotraumatolog
         duration: 90
         price: 250
       - name: Wsparcie dla osób z ADHD/ASD (powyżej 18 r.ż.)
+        link: /uslugi/wsparcie-doroslych
         duration: 50
         price: 190
       - name: Nauka czytania
+        link: /uslugi/rozwoj-dziecka-i-edukacja
         duration: 40
         price: 130
       - name: Kids Skill's
+        link: /uslugi/rozwoj-dziecka-i-edukacja
         duration: 50
         price: 150
       - name: Trening funkcji poznawczych
+        link: /uslugi/rozwoj-dziecka-i-edukacja
         duration: 45
         price: 160
       - name: Zajęcia Fusion
@@ -64,8 +79,10 @@ sections:
       url: "#pakiety"
 
   - highlight: true
+    id: opinie-i-diagnozy
     items:
       - name: Opinia psychologiczno-pedagogiczna
+        link: /uslugi/opinia-psychologiczno-pedagogiczna
         price: 750
         numbered: true
         list:
@@ -76,16 +93,19 @@ sections:
           - name: Rozszerzenie OPP o diagnozę ADHD
             price: 850
       - name: Diagnoza ADHD dziecka
+        link: /uslugi/diagnoza
         price: 1200
         details: Obejmuje 3 spotkania (50 min)
         list:
           - Wywiad z rodzicem
           - 2 spotkania diagnostyczne z psychologiem
       - name: Badanie gotowości szkolnej
+        link: /uslugi/diagnoza
         price: 500
       - name: Opinia o braku przeciwwskazań do podjęcia pracy
         price: 200
       - name: Diagnoza psychologiczna dzieci i młodzieży (do 18 r.ż.)
+        link: /uslugi/diagnoza
         price: 880
         details: Obejmuje 3 spotkania (50 min)
         list:
@@ -113,6 +133,7 @@ sections:
       Zasady odrabiania nieobecności oraz warunki ewentualnego odpracowania zajęć są ustalane podczas podpisywania kontraktu i określane w jego warunkach.
 
   - title: Diagnoza psychologiczna osób dorosłych
+    id: diagnoza-doroslych
     intro: >-
       **Diagnoza psychologiczna** to indywidualny proces, którego zakres zależy od zgłaszanych trudności
       i celu badania. Obejmuje rozmowę i pogłębiony wywiad dotyczący funkcjonowania, a w zależności od potrzeb
@@ -120,12 +141,16 @@ sections:
       oraz przygotowaniem pisemnej opinii psychologicznej.
     items:
       - name: Konsultacja diagnostyczna
+        link: /uslugi/diagnoza
         price: 200
       - name: Diagnoza psychologiczna dorosłych (1 spotkanie)
+        link: /uslugi/diagnoza
         price: 300
       - name: Diagnoza ADHD dorosłych (3 spotkania)
+        link: /uslugi/diagnoza
         price: 1400
       - name: Diagnoza funkcjonowania intelektualnego (90min)
+        link: /uslugi/diagnoza
         price: 600
     footnote: >-
       Pamiętaj! Jeśli po konsultacji zdecydujesz się kontynuować diagnozę, koszt konsultacji zostanie

@@ -3,6 +3,9 @@ last_modified: 2026-10-08
 title: "Diagnoza psychologiczna dzieci i dorosłych Wrocław"
 layout: page
 description: "Diagnoza psychologiczna, pedagogiczna, logopedyczna i ADHD (test Conners-3) we Wrocławiu. Rzetelne badanie i konkretne zalecenia. Umów się w EVEMED."
+specialists:
+  - "mgr Aleksandra Kopyto"
+  - "mgr Joanna Chryplewicz"
 ---
 <div class="col-lg-12 text-center">
 	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
@@ -41,6 +44,8 @@ Diagnoza w kierunku ADHD to **wielowymiarowy proces, który pozwala zrozumieć, 
 
 ### Diagnoza funkcji poznawczych
 Pamięć, uwaga, koncentracja, szybkość myślenia – to **narzędzia naszego umysłu**, z których korzystamy każdego dnia. Gdy któreś z nich nie działa w pełni sprawnie, codzienne zadania, a zwłaszcza nauka, mogą stać się ogromnym wyzwaniem. Diagnoza funkcji poznawczych to **specjalistyczny "przegląd" tych fundamentalnych umiejętności**. Podczas badania, dostosowanego do wieku pacjenta, psycholog stosuje serię testów i zadań, które pozwalają precyzyjnie ocenić, jak działają poszczególne funkcje poznawcze. Dowiadujemy się, które z nich są mocną stroną, a które wymagają wzmocnienia. To badanie jest kluczowe, gdy obserwujemy **problemy z koncentracją, zapamiętywaniem materiału czy organizacją pracy**. Wyniki stanowią solidną podstawę do zaplanowania skutecznego **treningu funkcji poznawczych** lub wdrożenia innych form wsparcia, które realnie poprawią komfort nauki i codziennego funkcjonowania.
+
+{% include service-cta.html %}
 
 <script type="application/ld+json">
 {

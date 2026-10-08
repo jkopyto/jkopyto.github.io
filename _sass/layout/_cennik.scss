@@ -111,6 +111,13 @@ body:has(.cennik) {
   flex: 1;
   min-width: 0;
   overflow-wrap: anywhere;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
 }
 
 .cennik-duration,

@@ -3,6 +3,9 @@ last_modified: 2026-10-08
 title: "EEG-Biofeedback Wrocław – trening pracy mózgu"
 layout: page
 description: "EEG-Biofeedback we Wrocławiu: bezbolesny, nieinwazyjny trening pracy mózgu dla dzieci i dorosłych. Wsparcie koncentracji, uwagi i redukcji stresu."
+specialists:
+  - "mgr Joanna Chryplewicz"
+  - "mgr Aleksandra Kopyto"
 ---
 <div class="col-lg-12 text-center mb-5">
 	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
@@ -22,6 +25,8 @@ description: "EEG-Biofeedback we Wrocławiu: bezbolesny, nieinwazyjny trening pr
 - Trudności w nauce i dysleksji
 - Przewlekłego stresu i napięcia
 - Poprawy funkcji poznawczych u dorosłych (pamięć, kreatywność) 
+
+{% include service-cta.html %}
 
 <script type="application/ld+json">
 {

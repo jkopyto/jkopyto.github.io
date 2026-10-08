@@ -3,6 +3,8 @@ last_modified: 2026-10-08
 title: "Psychoterapia i wsparcie dorosłych Wrocław i online"
 layout: page
 description: "Psychoterapia dorosłych we Wrocławiu i online w nurcie CBT: lęk, depresja, stres, wypalenie, trudności w relacjach. Konsultacja, terapia traumy, trening."
+specialists:
+  - "mgr Aleksandra Kopyto"
 ---
 <div class="col-lg-12 text-center mb-5">
 	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
@@ -46,6 +48,8 @@ Nurt ten uczy nas, jak przestać walczyć z trudnymi myślami i emocjami. Zamias
 
 ### Terapia skoncentrowana na rozwiązaniach (TSR - Solution Focused Brief Therapy) 
 To krótkoterminowe podejście, które – jak sama nazwa wskazuje – koncentruje się na rozwiązaniach, a nie na dogłębnym analizowaniu problemów. Zamiast pytać "dlaczego jest źle?", terapeuta TSR pyta "co małego możemy zrobić, żeby było trochę lepiej?". Szukamy Twoich mocnych stron, zasobów i tych momentów w życiu, kiedy problem nie występował. To terapia bardzo praktyczna, zorientowana na przyszłość i budowanie pożądanych zmian krok po kroku.
+
+{% include service-cta.html %}
 
 <script type="application/ld+json">
 {

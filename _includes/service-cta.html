@@ -1,0 +1,36 @@
+{%- comment -%}
+  Closing block for /uslugi/* pages.
+  Price: lowest price of _data/cennik.yml items whose `link` is this page.
+  Specialists: front matter `specialists:` (names as in _data/sitetext.yml team.people).
+  Booking: /umow-sie button, or front matter `booking_email:` for services booked by email only.
+{%- endcomment -%}
+{%- assign service_url = page.url | remove: '.html' -%}
+{%- assign min_price = nil -%}
+{%- assign price_anchor = nil -%}
+{%- for section in site.data.cennik.sections -%}
+  {%- for item in section.items -%}
+    {%- if item.link == service_url -%}
+      {%- if min_price == nil or item.price < min_price -%}
+        {%- assign min_price = item.price -%}
+        {%- assign price_anchor = section.id -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+<div class="service-cta text-center my-5">
+  <p class="mb-2">
+    {%- if min_price %}Cena: <a href="/cennik{% if price_anchor %}#{{ price_anchor }}{% endif %}">od {{ min_price }} zł</a>
+    {%- else %}<a href="/cennik">Zobacz cennik</a>{% endif -%}
+  </p>
+  {%- if page.specialists %}
+  <p class="mb-4">{% if page.specialists.size > 1 %}Prowadzą{% else %}Prowadzi{% endif %}:
+    {% for name in page.specialists %}<a href="/#{{ name | remove: 'mgr ' | slugify: 'latin' }}">{{ name }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
+  </p>
+  {%- endif %}
+  {%- if page.booking_email %}
+  <p class="mb-0">Umów wizytę mailowo: <a href="mailto:{{ page.booking_email }}">{{ page.booking_email }}</a></p>
+  {%- else %}
+  <a class="btn btn-primary btn-lg" href="/umow-sie">Umów wizytę</a>
+  {%- endif %}
+  <p class="mt-3 mb-0">lub zadzwoń: <a href="tel:{{ site.contact.phone.val }}">{{ site.contact.phone.formatted }}</a></p>
+</div>

@@ -100,7 +100,7 @@ permalink: /umow-sie
             <div class="step-card text-center">
               <div class="step-number">1</div>
               <h6>Wybierz specjalistę</h6>
-              <p class="small text-muted">Zapoznaj się z profilami naszych psychologów</p>
+              <p class="small text-muted">Zapoznaj się z <a href="/#zespol">profilami naszych specjalistów</a></p>
             </div>
           </div>
           <div class="col-md-3 mb-4">

@@ -3,6 +3,11 @@ last_modified: 2026-10-08
 title: "Psycholog dziecięcy, pedagog i logopeda Wrocław"
 layout: page
 description: "Psycholog dziecięcy, pedagog i logopeda we Wrocławiu: konsultacje, terapia logopedyczna, Kids' Skills, trening funkcji poznawczych, Metoda Krakowska."
+specialists:
+  - "mgr Joanna Chryplewicz"
+  - "mgr Monika Machowska"
+  - "mgr Magdalena Karasewicz"
+  - "mgr Łukasz Betlewicz"
 ---
 <div class="col-lg-12 text-center mb-5">
 	<h1 class="section-heading text-uppercase">{{ page.title }}</h1>
@@ -47,6 +52,8 @@ Jeśli masz wrażenie, że Twoje dziecko potrzebuje ciągłych korepetycji, a mi
 
 ### Nauka czytania Metodą Krakowską ®
 To sprawdzona, oparta na badaniach naukowych metoda, która systematycznie i skutecznie wprowadza dziecko w świat liter i słów. Opiera się na pracy z sylabami, co jest zgodne z naturalnym rozwojem percepcji dziecka. Jest niezwykle pomocna dla dzieci z grupy ryzyka dysleksji, z opóźnionym rozwojem mowy czy z ogólnymi trudnościami w nauce. Zajęcia prowadzone w formie atrakcyjnych zabaw językowych sprawiają, że nauka czytania staje się fascynującą przygodą, a nie żmudnym obowiązkiem.
+
+{% include service-cta.html %}
 
 <script type="application/ld+json">
 {

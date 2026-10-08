@@ -3,6 +3,9 @@ last_modified: 2026-10-08
 title: "Opinia psychologiczno-pedagogiczna Wrocław"
 layout: page
 description: "Opinia psychologiczno-pedagogiczna dla szkoły we Wrocławiu: diagnoza dysleksji, trudności w nauce i emocji w 3 spotkaniach. Pisemne zalecenia."
+specialists:
+  - "mgr Aleksandra Kopyto"
+  - "mgr Joanna Chryplewicz"
 ---
 
 <div class="col-lg-12 text-center mb-5">
@@ -49,6 +52,8 @@ Aby diagnoza była jak najbardziej trafna, prosimy o zebranie i dostarczenie nam
 Każda diagnoza kończy się pisemną opinią z zaleceniami, która stanowi punkt wyjścia do terapii, wsparcia szkolnego lub dalszych konsultacji.
 
 **Pamiętaj**, diagnoza to nie ocena, ale początek nowej, bardziej świadomej drogi **wsparcia** dla Twojego dziecka.
+
+{% include service-cta.html %}
 
 <script type="application/ld+json">
 {

@@ -21,7 +21,7 @@ permalink: /cennik
       {% for item in section.items %}
       <div class="cennik-item">
         <div class="cennik-row">
-          <span class="cennik-name">{{ item.name }}</span>
+          <span class="cennik-name">{% if item.link %}<a href="{{ item.link }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</span>
           {% if item.duration %}<span class="cennik-duration">{{ item.duration }} min</span>{% endif %}
           <span class="cennik-price">{{ item.price }} zł</span>
         </div>

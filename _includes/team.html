@@ -10,7 +10,7 @@
   
   <div class="row">
     {% for person in site.data.sitetext[site.locale].team.people %}
-    <div class="col-12 mb-5">
+    <div class="col-12 mb-5" id="{{ person.name | remove: 'mgr ' | slugify: 'latin' }}">
       <div class="team-member-wrapper">
         <div class="row align-items-center">
           <!-- Image and basic info -->
