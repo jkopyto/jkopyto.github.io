@@ -1,0 +1,20 @@
+<!-- Header -->
+  {%- assign header = site.data.sitetext[site.locale].header | default: site.data.sitetext.header %}
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+	  {%- if header.title -%}
+        <div class="intro-lead-in">{{ header.title | markdownify }}</div>
+	  {%- endif -%}
+	  {%- if header.text -%}
+        <h1 class="intro-heading">{{ header.text }}{% if header.subtext %} <span class="intro-heading-sub">{{ header.subtext }}</span>{% endif %}</h1>
+	  {%- endif -%}
+        <div class="intro-buttons">
+          <a class="btn btn-primary btn-xl text-uppercase" href="{{ header.buttonlink }}">{{ header.button }}</a>
+          <a class="btn btn-outline-light btn-xl text-uppercase" href="tel:{{ site.contact.phone.val }}"><i class="fas fa-phone mr-2"></i>{{ header.callbutton }}</a>
+        </div>
+        <img src="/assets/img/evemed.svg" width="1313" height="815" fetchpriority="high" alt="EVEMED – Poradnia Psychologiczno-Pedagogiczna" />
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->

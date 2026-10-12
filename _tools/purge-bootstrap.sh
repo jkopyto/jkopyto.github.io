@@ -1,7 +1,8 @@
 #!/bin/sh
 # Rebuilds assets/css/bootstrap.purged.min.css: the theme's Bootstrap 4.3.1 minus classes the site never uses.
 # Run it whenever a template, page or _data file starts using a Bootstrap class it didn't use before,
-# then compare the pages and commit the regenerated CSS.
+# then compare the pages and commit the regenerated CSS. Run _tools/critical-css.sh afterwards: the home
+# page inlines part of this file.
 set -e
 cd "$(dirname "$0")/.."
 bundle exec jekyll build -q

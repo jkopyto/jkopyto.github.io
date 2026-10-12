@@ -1,7 +1,6 @@
 // Self-hosted web fonts (latin + latin-ext for Polish). Generated from Google Fonts css2;
 // files live in /assets/fonts. Used: Montserrat (headings), Droid Serif italic (lead-ins/subheadings),
-// Cormorant Garamond (/cennik). Body text uses the system font stack: the theme's body-font mixin has
-// 'Roboto Slab' commented out (GitHub Pages' Sass drops it; local Dart Sass keeps it, so don't add it back).
+// Cormorant Garamond (/cennik). Body text uses the system font stack (body-font mixin in assets/css/agency.scss).
 
 @font-face {
   font-family: 'Montserrat';

@@ -91,17 +91,36 @@
   <link rel="preload" as="image" href="/assets/img/header-bg-1600.webp" media="(min-width: 768px)" fetchpriority="high" />
   {%- endif %}
 
-  <!-- Bootstrap core CSS -->
+  {%- comment %}
+    Home page: the CSS for its first screen is inlined (_includes/critical-home.css, regenerate with
+    _tools/critical-css.sh) and the full stylesheets load in the background, in their usual order,
+    so no CSS file blocks the first paint. _tools/critical-off.yml switches this off for the generator.
+  {% endcomment %}
+  {%- assign inline_critical = false %}
+  {%- if page.layout == "home" and site.critical_css != false %}{% assign inline_critical = true %}{% endif %}
+
   <!-- Bootstrap 4.3.1 without unused classes; regenerate with _tools/purge-bootstrap.sh -->
+  {%- if inline_critical %}
+  <link rel="preload" href="/assets/css/bootstrap.purged.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  {%- else %}
   <link href="/assets/css/bootstrap.purged.min.css" rel="stylesheet" />
+  {%- endif %}
 
   <!-- Icons (Font Awesome): loaded without blocking the first render, icons appear a moment later.
        Web fonts are self-hosted, see _sass/base/_fonts.scss -->
   <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link href="/assets/css/all.min.css" rel="stylesheet" type="text/css" /></noscript>
   <!-- Custom styles for this theme -->
-  <!--<link href="assets/css/agency.min.css" rel="stylesheet">-->
+  {%- if inline_critical %}
+  <style>{% include critical-home.css %}</style>
+  <link rel="preload" href="/assets/css/agency.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="/assets/css/bootstrap.purged.min.css" rel="stylesheet" />
+    <link href="/assets/css/agency.css" rel="stylesheet" />
+  </noscript>
+  {%- else %}
   <link href="/assets/css/agency.css" rel="stylesheet" />
+  {%- endif %}
 
   <!-- Page container change top padding when nav shrinks -->
   {% if page.layout == "page" %}

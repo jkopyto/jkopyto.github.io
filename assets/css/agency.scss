@@ -16,6 +16,14 @@
   {% endfor %}
 {% endif %}
 
+// Local Jekyll 4 merges the remote theme's _data/style.yml, whose `fonts:` list makes the loop above set
+// body-font to "Roboto Slab"; GitHub Pages (Jekyll 3) doesn't merge theme data, so live uses the system font.
+// Pin it here, after the loop, so every build produces the same CSS as live.
+@mixin body-font {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 // Custom colors
 $primary: {{ site.data.style.primary | default: "#fed136" }} !default;
 $primary-light: {{ site.data.style.primary-light | default: "#b4b6ff" }} !default;

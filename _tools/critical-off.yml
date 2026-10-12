@@ -1,0 +1,3 @@
+# Used by _tools/critical-css.sh: builds the home page with its normal blocking stylesheets,
+# so critical CSS is extracted from the real styles, not from the previously inlined copy.
+critical_css: false
