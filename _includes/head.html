@@ -87,15 +87,17 @@
 
   {%- if page.layout == "home" %}
   <!-- Hero background (LCP area): fetch the size this screen will use right away -->
-  <link rel="preload" as="image" href="/assets/img/header-bg-800.webp" media="(max-width: 767.98px)" />
-  <link rel="preload" as="image" href="/assets/img/header-bg-1600.webp" media="(min-width: 768px)" />
+  <link rel="preload" as="image" href="/assets/img/header-bg-800.webp" media="(max-width: 767.98px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/assets/img/header-bg-1600.webp" media="(min-width: 768px)" fetchpriority="high" />
   {%- endif %}
 
   <!-- Bootstrap core CSS -->
   <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Icons; web fonts are self-hosted, see _sass/base/_fonts.scss -->
-  <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css" />
+  <!-- Icons (Font Awesome): loaded without blocking the first render, icons appear a moment later.
+       Web fonts are self-hosted, see _sass/base/_fonts.scss -->
+  <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="/assets/css/all.min.css" rel="stylesheet" type="text/css" /></noscript>
   <!-- Custom styles for this theme -->
   <!--<link href="assets/css/agency.min.css" rel="stylesheet">-->
   <link href="/assets/css/agency.css" rel="stylesheet" />
