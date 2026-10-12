@@ -1,49 +1,120 @@
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="author" content="{{ site.author }}">
-  {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | replace:'.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta
+    name="description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+  />
+  <meta name="author" content="{{ site.author }}" />
+  {% if page.noindex %}
+  <meta name="robots" content="noindex" />
+  {% endif %}
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | replace:'.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
 
-  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link
+    rel="icon"
+    type="image/png"
+    href="/favicon/favicon-96x96.png"
+    sizes="96x96"
+  />
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
   <link rel="shortcut icon" href="/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/favicon/apple-touch-icon.png"
+  />
   <meta name="apple-mobile-web-app-title" content="Evemed" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
-  <meta property="og:title" content='{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}Evemed Niepubliczna Poradnia Psychologiczno Pedagogiczna | Wrocław{% endif %}' />
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta
+    property="og:title"
+    content='{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}Evemed Niepubliczna Poradnia Psychologiczno Pedagogiczna | Wrocław{% endif %}'
+  />
+  <meta
+    property="og:description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+  />
   <meta property="og:determiner" content="the" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ page.url | replace:'index.html','' | replace:'.html','' | prepend: site.baseurl | prepend: site.url }}" />
-  <meta property="og:image" content="https://evemed.pl/assets/img/logo.png" />
+  <meta
+    property="og:url"
+    content="{{ page.url | replace:'index.html','' | replace:'.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+  <meta property="og:site_name" content="Evemed" />
+  {%- comment %} page.image in front matter overrides the 1200x630 default {%
+  endcomment %}
+  <meta
+    property="og:image"
+    content="{{ page.image | default: '/assets/img/og-default.jpg' | absolute_url }}"
+  />
+  {%- unless page.image %}
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta
+    property="og:image:alt"
+    content="EVEMED - Poradnia psychologiczno-pedagogiczna, Wrocław, online"
+  />
+  {%- endunless %}
+  <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:locale" content="pl_PL" />
-  {% include schema-org.html %}
-  {% if page.svc_name %}{% include schema-service.html %}{% endif %}
+  {% include schema-org.html %} {% if page.svc_name %}{% include
+  schema-service.html %}{% endif %}
   <!-- Consent Mode v2 defaults: GTM loads only after consent, see cookie.html -->
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied",
+      wait_for_update: 500,
+    })
   </script>
-  <title>{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}Evemed Niepubliczna Poradnia Psychologiczno Pedagogiczna | Wrocław{% endif %}</title>
+  <title>
+    {% if page.title %}{{ page.title | append: " | " | append: site.title }}{%
+    else %}Evemed Niepubliczna Poradnia Psychologiczno Pedagogiczna | Wrocław{%
+    endif %}
+  </title>
 
   <!-- Bootstrap core CSS -->
   <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Custom fonts for this template -->
-  <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css">
-  {% if site.data.style.fonts_urls %}
-    {% for font_url in site.data.style.fonts_urls %}
-      <link href="{{font_url}}" rel="stylesheet" type="text/css">
-    {% endfor %}
-  {% else %}
-    <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css" />
+  {% if site.data.style.fonts_urls %} {% for font_url in
+  site.data.style.fonts_urls %}
+  <link href="{{font_url}}" rel="stylesheet" type="text/css" />
+  {% endfor %} {% else %}
+  <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Kaushan+Script"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+    rel="stylesheet"
+    type="text/css"
+  />
   {% endif %}
   <!-- Custom styles for this theme -->
   <!--<link href="assets/css/agency.min.css" rel="stylesheet">-->
@@ -61,6 +132,5 @@
       }
     }
   </style>
-  {% endif %}
-	{% include cookie.html %}
+  {% endif %} {% include cookie.html %}
 </head>
