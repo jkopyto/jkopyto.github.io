@@ -3,7 +3,7 @@
     <div class="container">
 	  <a class="navbar-brand js-scroll-trigger" href="#page-top">
           {%- if site.logo -%}
-            <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path }}"/>
+            <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path }}" alt="{{ site.title }}"/>
           {%- else -%}
             {{ site.title }}
           {%- endif -%}
@@ -60,7 +60,7 @@
           <a class="btn btn-primary btn-xl text-uppercase" href="{{ header.buttonlink }}">{{ header.button }}</a>
           <a class="btn btn-outline-light btn-xl text-uppercase" href="tel:{{ site.contact.phone.val }}"><i class="fas fa-phone mr-2"></i>{{ header.callbutton }}</a>
         </div>
-        <img src="/assets/img/evemed.svg" />
+        <img src="/assets/img/evemed.svg" width="1313" height="815" fetchpriority="high" alt="EVEMED – Poradnia Psychologiczno-Pedagogiczna" />
       </div>
     </div>
   </header>

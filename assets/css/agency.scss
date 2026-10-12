@@ -27,6 +27,7 @@ $header-image: "{{ site.data.style.header-image }}";
 $contact-image: "{{ site.data.style.contact-image }}";
 
 // Global CSS
+@import "base/fonts.scss";
 @import "base/page.scss";
 
 // Components

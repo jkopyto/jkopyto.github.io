@@ -85,37 +85,17 @@
     endif -%}
   </title>
 
+  {%- if page.layout == "home" %}
+  <!-- Hero background (LCP area): fetch the size this screen will use right away -->
+  <link rel="preload" as="image" href="/assets/img/header-bg-800.webp" media="(max-width: 767.98px)" />
+  <link rel="preload" as="image" href="/assets/img/header-bg-1600.webp" media="(min-width: 768px)" />
+  {%- endif %}
+
   <!-- Bootstrap core CSS -->
   <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Custom fonts for this template -->
+  <!-- Icons; web fonts are self-hosted, see _sass/base/_fonts.scss -->
   <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css" />
-  {% if site.data.style.fonts_urls %} {% for font_url in
-  site.data.style.fonts_urls %}
-  <link href="{{font_url}}" rel="stylesheet" type="text/css" />
-  {% endfor %} {% else %}
-  <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-    rel="stylesheet"
-    type="text/css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Kaushan+Script"
-    rel="stylesheet"
-    type="text/css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
-    rel="stylesheet"
-    type="text/css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
-    rel="stylesheet"
-    type="text/css"
-  />
-  {% endif %}
   <!-- Custom styles for this theme -->
   <!--<link href="assets/css/agency.min.css" rel="stylesheet">-->
   <link href="/assets/css/agency.css" rel="stylesheet" />

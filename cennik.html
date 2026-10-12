@@ -1,16 +1,15 @@
 ---
-last_modified: 2026-10-08
+last_modified: 2026-10-12
 layout: page
 title: "Cennik - poradnia psychologiczna Wrocław"
 description: "Cennik poradni EVEMED we Wrocławiu: konsultacja 180 zł, psychoterapia, diagnozy ADHD, opinie psychologiczno-pedagogiczne, pakiety zajęć dla dzieci."
 permalink: /cennik
 ---
 <!-- Treść cennika: _data/cennik.yml -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
 
 <div class="cennik">
   <div class="cennik-card">
-    <img class="cennik-logo" src="/assets/img/evemed.svg" alt="" width="1313" height="815" />
+    <img class="cennik-logo" src="/assets/img/evemed.svg" alt="EVEMED - Poradnia Psychologiczno-Pedagogiczna" width="1313" height="815" />
     <h1 class="cennik-title">Cennik</h1>
 
     {% for section in site.data.cennik.sections %}
@@ -20,11 +19,11 @@ permalink: /cennik
 
       {% for item in section.items %}
       <div class="cennik-item">
-        <div class="cennik-row">
-          <span class="cennik-name">{% if item.link %}<a href="{{ item.link }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</span>
-          {% if item.duration %}<span class="cennik-duration">{{ item.duration }} min</span>{% endif %}
-          <span class="cennik-price">{{ item.price }} zł</span>
-        </div>
+        <dl class="cennik-row">
+          <dt class="cennik-name">{% if item.link %}<a href="{{ item.link }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</dt>
+          {% if item.duration %}<dd class="cennik-duration">{{ item.duration }} min</dd>{% endif %}
+          <dd class="cennik-price">{{ item.price }} zł</dd>
+        </dl>
         {% if item.details %}<p class="cennik-details">{{ item.details }}</p>{% endif %}
         {% if item.list %}
         {% if item.numbered %}<ol class="cennik-list">{% else %}<ul class="cennik-list">{% endif %}
@@ -32,10 +31,10 @@ permalink: /cennik
         {% if item.numbered %}</ol>{% else %}</ul>{% endif %}
         {% endif %}
         {% for addon in item.addons %}
-        <div class="cennik-row cennik-addon">
-          <span class="cennik-name">&gt; {{ addon.name }}</span>
-          <span class="cennik-price">{{ addon.price }} zł</span>
-        </div>
+        <dl class="cennik-row cennik-addon">
+          <dt class="cennik-name">&gt; {{ addon.name }}</dt>
+          <dd class="cennik-price">{{ addon.price }} zł</dd>
+        </dl>
         {% endfor %}
       </div>
       {% endfor %}

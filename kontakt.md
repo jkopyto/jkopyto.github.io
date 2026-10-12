@@ -1,5 +1,5 @@
 ---
-last_modified: 2026-10-08
+last_modified: 2026-10-12
 layout: page
 title: "Kontakt – poradnia, ul. Inowrocławska 56 Wrocław"
 description: "Kontakt z poradnią EVEMED: ul. Inowrocławska 56, Wrocław. Zadzwoń (+48) 724 314 798, napisz na poradnia@evemed.pl lub wyślij wiadomość przez formularz."
@@ -95,7 +95,7 @@ permalink: /kontakt
     <div class="row">
       <div class="col-lg-12">
         <div class="map-container">
-          <!-- Google Maps Embed - Replace with your actual coordinates -->
+          <!-- Google Maps Embed -->
           <iframe 
             src="https://www.google.com/maps/embed?pb={{ site.google.maps.pin }}"
             width="100%" 
@@ -106,6 +106,15 @@ permalink: /kontakt
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-lg-12 text-center">
+        <h3 class="h5 font-weight-bold">Dojazd komunikacją miejską</h3>
+        <p class="text-muted mb-0">
+          <i class="fas fa-tram mr-1"></i> Tramwaj: przystanek <strong>Michalczyka</strong><br>
+          <i class="fas fa-bus mr-1"></i> Autobus: przystanki <strong>Michalczyka</strong> i <strong>Inowrocławska</strong>
+        </p>
       </div>
     </div>
   </div>
