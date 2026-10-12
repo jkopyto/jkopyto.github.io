@@ -12,7 +12,9 @@
 pl: &DEFAULT_PL
   header:
     title: Witaj w naszej poradni!
-    text: Poradnia psychologiczno-pedagogiczna we Wrocławiu i online
+    # text-nowrap: the compound must never break at its hyphen (sizes in _masthead.scss)
+    text: 'Poradnia <span class="text-nowrap">psychologiczno-pedagogiczna</span>'
+    subtext: we Wrocławiu i online
     button: Umów wizytę
     buttonlink: "/umow-sie"
     callbutton: Zadzwoń

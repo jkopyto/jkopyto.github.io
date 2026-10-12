@@ -1,0 +1,37 @@
+// Button Styles — replaces the theme's components/buttons.scss (same import path).
+.btn {
+  @include heading-font;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
+// Depth instead of the theme's flat fill: same gradient as the cookie banner's primary button.
+.btn-primary {
+  background-color: $primary;
+  background-image: linear-gradient(135deg, $primary 0%, lighten($primary, 8%) 100%);
+  border-color: transparent;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18), 0 2px 4px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  &:hover,
+  &:focus,
+  &:not(:disabled):not(.disabled):active {
+    background-color: darken($primary, 7.5%);
+    background-image: linear-gradient(135deg, darken($primary, 5%) 0%, $primary 100%);
+    border-color: transparent;
+    color: white;
+  }
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22), 0 3px 6px rgba(0, 0, 0, 0.14);
+  }
+  // the theme shipped a yellow ring (its default accent); use the brand purple
+  &:focus,
+  &:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem rgba($primary, 0.5);
+  }
+}

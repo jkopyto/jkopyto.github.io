@@ -209,8 +209,13 @@
         ad_personalization: state,
       })
       if (consent.analytics) {
+        {%- if jekyll.environment == "production" %}
         loadGTM()
         enableGoogleAnalytics()
+        {%- else %}
+        // local builds (JEKYLL_ENV != production) never load GTM / AW / GA4, so test visits don't reach the stats
+        console.info("[evemed] Google tags skipped: JEKYLL_ENV is not production")
+        {%- endif %}
       }
     }
 
