@@ -221,6 +221,8 @@
       gtag("config", "{{ site.analytics.google }}", {
         cookie_flags: "SameSite=None;Secure",
       })
+      // GA4 rides on the same gtag.js as the AW tag
+      gtag("config", "{{ site.analytics.ga4 }}")
 
       const script = document.createElement("script")
       script.id = "gtag-evemed"
