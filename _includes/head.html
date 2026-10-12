@@ -108,7 +108,24 @@
 
   <!-- Icons (Font Awesome): loaded without blocking the first render, icons appear a moment later.
        Web fonts are self-hosted, see _sass/base/_fonts.scss -->
+  {%- if inline_critical %}
+  {%- comment %} Home page: only after the page has loaded and painted, so its ~160 KB of icon fonts don't compete
+    with the hero (LCP). Inserted before agency.css to keep the usual cascade order. {% endcomment %}
+  <script>
+    addEventListener("load", function () {
+      requestAnimationFrame(function () {
+        setTimeout(function () {
+          var fa = document.createElement("link"), agency = document.querySelector('link[href="/assets/css/agency.css"]')
+          fa.rel = "stylesheet"
+          fa.href = "/assets/css/all.min.css"
+          agency.parentNode.insertBefore(fa, agency)
+        })
+      })
+    })
+  </script>
+  {%- else %}
   <link rel="preload" href="/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  {%- endif %}
   <noscript><link href="/assets/css/all.min.css" rel="stylesheet" type="text/css" /></noscript>
   <!-- Custom styles for this theme -->
   {%- if inline_critical %}

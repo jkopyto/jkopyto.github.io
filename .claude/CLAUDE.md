@@ -51,10 +51,15 @@ page first appears with the old styles and then changes when the full CSS arrive
 - Cookie-banner rules and grid columns (`.col-*`) are always included (`_tools/critical-home.mjs`): the
   banner appears before the full CSS may arrive, and rows lower on the page overflow the screen without
   column padding.
+- On the home page Font Awesome loads only after the page has loaded and painted (`_includes/head.html`), so its
+  icon fonts (~160 KB) don't delay the hero. Don't add `<i class="fas …">` icons to the hero: they would appear late.
+  Draw them inline as SVG instead, like the phone icon in `_includes/masthead.html`.
 
 ## Local builds and fonts
 
 Body text uses the system font stack. Local Jekyll 4 merges the remote theme's `_data/style.yml`, whose
 `fonts:` list would make body text "Roboto Slab" locally only (GitHub Pages' Jekyll 3 doesn't merge theme
 data). `assets/css/agency.scss` pins `body-font` after that loop so local and live CSS match; keep it there.
-Web fonts are self-hosted (`_sass/base/_fonts.scss`, files in `assets/fonts/`).
+Web fonts are self-hosted (`_sass/base/_fonts.scss`, files in `assets/fonts/`). Montserrat's latin-ext file is
+trimmed to Latin Extended-A (U+0100–017F: Polish and other Central European letters); letters outside it fall back
+to the system font. The command that made it is in `_fonts.scss`.
