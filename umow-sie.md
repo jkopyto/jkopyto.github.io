@@ -1,5 +1,5 @@
 ---
-last_modified: 2026-10-08
+last_modified: 2026-10-12
 layout: page
 title: "Umów wizytę u psychologa lub pedagoga - Wrocław"
 description: "Umów wizytę u psychologa, pedagoga, logopedy lub psychotraumatologa we Wrocławiu lub online. Wybierz specjalistę i termin w kalendarzu – to kilka kliknięć."
@@ -39,6 +39,13 @@ permalink: /umow-sie
             data-twoj-psycholog-button-text-color="{{ site.data.style.white }}"
           ></div>
         </div>
+        <!-- Visible without JS too: fallback when the twojpsycholog.pl calendar doesn't load -->
+        <p class="booking-fallback text-center text-muted mt-3 mb-0">
+          Problem z kalendarzem? Zadzwoń lub wyślij SMS:
+          <a href="tel:{{ site.contact.phone.val }}">{{ site.contact.phone.formatted }}</a>,
+          napisz: <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+          albo skorzystaj z <a href="/kontakt">formularza kontaktowego</a>.
+        </p>
       </div>
     </div>
   </div>
@@ -244,4 +251,4 @@ permalink: /umow-sie
   </div>
 </section>
 
-<script src="https://twojpsycholog.pl/static/widget/static/js/twoj-psycholog-widget.js"></script>
+<script defer src="https://twojpsycholog.pl/static/widget/static/js/twoj-psycholog-widget.js"></script>
