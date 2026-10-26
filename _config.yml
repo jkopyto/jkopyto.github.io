@@ -27,6 +27,7 @@ locale: "pl-PL" # See available languages in _data/sitetext.yml
 
 analytics:
   ga4: G-7RJZQ26SGD
+  ga4_2: G-8HFKQ61SDB # evemed
   google: AW-17910255653
   gtm: GTM-T5977GFG
 
